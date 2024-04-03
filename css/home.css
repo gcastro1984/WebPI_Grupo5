@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap');
+
+@font-face {
+    font-family: kola;
+    src: url(.//fonts/Kola-Regular.ttf)
+}
+
+body {
+    background-color: #d9b967;
+}
+
+
+/* definir a cor de background da navbar */
+.container-fluid {
+    background-color: #0e21a0;
+}
+
+/* para dispor itens da navbar em linha */
+.navbar {
+    display:inline;
+}
+
+/* para colocar a lista não ordenada de links de navegação sem estilo */
+.navbar-nav {
+    list-style-type: none;
+}
+
+/* estilizar os links de navegação na navbar */
+.nav-link {
+    font-family: kola;
+    font-weight:400;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    color: #d9b967;
+}
+
+/* estilizar os links de navegação navbar em hover */
+.nav-link:hover {
+    color: #9d44c0;
+    text-decoration: none;
+}
+
+/* para definir a animação do underline nos links de navegação da navbar */
+.nav-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -2px;
+    left: 0;
+    background-color: #9d44c0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* tornar ativa a visualização do underline dos links de navegação quando em hover */
+li.active .nav-link:before,
+.nav-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* estilização da caixa search */
+.form-control {
+    font-family: kola;
+    font-weight:300;
+    font-size: 15px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d9b967;
+}
+
+/* estilização do botão login */
+.button-submit {
+    font-family: kola;
+    font-weight:300;
+    font-size: 15px;
+    background-color: #d9b967;
+    color: #0e21a0;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d9b967;
+}
