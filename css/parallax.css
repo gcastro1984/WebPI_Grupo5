@@ -52,12 +52,12 @@
 }
 
 #parallax-world-of-ugg h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 70px;
+  font-family: kola;
+  font-size: 100px;
   letter-spacing: 10px;
   text-align: center;
   color: whitesmoke;
-  font-weight: 400;
+  font-weight:bold;
   text-transform: uppercase;
   z-index: 10;
   opacity: .9;
@@ -274,3 +274,4 @@
     padding: 30px 15px;
     width: 290px;
   }
+}
