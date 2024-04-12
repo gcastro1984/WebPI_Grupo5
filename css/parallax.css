@@ -6,26 +6,14 @@
 }
 
 
-/* Override UGG site */
-
-#main {
-  width: 100%;
-  padding: 0;
+body #parallax-tsiw {
+  margin-bottom: 0px;
+  background-color: #9d44c0;
 }
 
 .content-asset p {
   margin: 0 auto;
 }
-
-.breadcrumb {
-  display: none;
-}
-
-
-
-/* Helpers */
-
-/**************************/
 
 .margin-top-10 {
   padding-top: 10px;
@@ -248,7 +236,7 @@
 
 .modal-button:hover {
   background-color: #0e21a0;
-  border: solid 2px #d9b967;
+  border: solid 3px #9d44c0;
   color: #d9b967;
   transform: scale(1.2)
 }
@@ -324,7 +312,7 @@
   
   .modal-button:hover {
     background-color: #0e21a0;
-    border: solid 1px #d9b967;
+    border: solid 1px #9d44c0;
     color: #d9b967;
     transform: scale(1.1)
   }
