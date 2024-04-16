@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap');
 
 @font-face {
   font-family: kola;
-  src: url(.//fonts/Kola-Regular.ttf)
+  src: url(.//fonts/Kola-Regular.ttf);
 }
 
 
@@ -30,7 +29,7 @@ body #parallax-tsiw {
 /**************************/
 
 #parallax-tsiw h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: kola;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
@@ -53,7 +52,7 @@ body #parallax-tsiw {
 }
 
 #parallax-tsiw h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: kola;
   font-size: 14px;
   line-height: 0;
   font-weight: 400;
@@ -63,13 +62,14 @@ body #parallax-tsiw {
 }
 
 #parallax-tsiw p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: kola;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
 
 .first-character {
+  font-family: kola;
   font-weight: 400;
   float: left;
   font-size: 84px;
