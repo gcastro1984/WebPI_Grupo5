@@ -6,13 +6,67 @@
     src: url(.//fonts/Kola-Regular.ttf)
 }
 
+body {
+    background-color: #9d44c0
+}
+
+
+.carousel-inner h5 {
+    font-family: kola;
+    color:#0e21a0;
+    font-size: xxx-large;
+    font-weight: bold;
+   letter-spacing: 0.3em;
+}
+
 .container-slide {
-    position: relative;
+   margin-top: 0%;
+   margin-bottom: 5%;
+   position: relative;
    display: flexbox;
    justify-content: center;
    align-items: center;
    width: 100%;
    
+}
+
+.container-numbers {
+    background-color: #0e21a0;
+}
+.container-numbers p {
+    font-family: kola;
+    font-weight: bolder;
+    font-size:x-large;
+    color: #d9b967;
+}
+
+.display-2 {
+    font-family: kola;
+    font-weight: bolder;
+    font-size:x-large;
+    color: white;
+    text-shadow: #0e21a0;
+}
 
 
+.esmad-tour {
+    background-color: #9d44c0; 
+}
+
+.row-tour {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-tour h3,h1 {
+    color: white;
+
+}
+
+.map-image {
+    margin: 5%;
 }
