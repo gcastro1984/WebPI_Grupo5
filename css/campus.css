@@ -5,3 +5,14 @@
     font-family: kola;
     src: url(.//fonts/Kola-Regular.ttf)
 }
+
+.container-slide {
+    position: relative;
+   display: flexbox;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   
+
+
+}
