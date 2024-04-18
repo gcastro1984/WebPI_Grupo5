@@ -23,6 +23,7 @@ body {
 /* para dispor itens da navbar em linha */
 .navbar {
     display:inline;
+    
 }
 
 /* para colocar a lista não ordenada de links de navegação sem estilo */
