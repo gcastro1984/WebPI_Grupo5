@@ -40,7 +40,11 @@
     font-family: kola;
     color: white;
     text-align: center;
-    margin-top: 3%;
+}
+
+.line {
+    color: #0e21a0;
+    border-top: 10px solid;
 }
 
 .sylabus-container {
