@@ -55,7 +55,7 @@ body {
 
 .row-tour {
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,9 +64,49 @@ body {
 
 .row-tour h3,h1 {
     color: white;
+    font-family: kola;
+    font-size: large;
+}
 
+.row-tour h1 {
+    color: white;
+    font-family: kola;
+    font-size: x-large;
 }
 
 .map-image {
     margin: 5%;
+}
+
+
+
+/* estilização do modal tour virtual */
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-color: #9d44c0;
+    
+}
+.modal-header img {
+    width: 8%;
+    margin-left: 30%;
+}
+
+
+.modal-footer   {
+    background-color: transparent;
+    border: none;
+    display:flex;
+    flex-direction: column;
+}
+
+.modal-footer-button {
+    margin-top: 0%;
+    background-color: #9d44c0;
+}
+
+.modal-body img {
+    margin-top: 5%;
+    width: 100%;
 }
