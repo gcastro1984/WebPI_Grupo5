@@ -1,0 +1,80 @@
+/* importar a fonte a usar */
+@font-face {
+    font-family: kola;
+    src: url(.//fonts/Kola-Regular.ttf)
+}
+
+@font-face {
+    font-family: kode;
+    src: url(/fonts/KodeMono-Regular.ttf)
+}
+
+.teachers-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.teachers-container img {
+   border: solid 5px #0e21a0;
+   border-radius: 5%;
+   margin-top: 5%;
+   margin-top: 5%;
+}
+
+.teachers-vision {
+    font-family: kola;
+    color: white;
+    text-align: center;
+    row-gap: 5%;
+    margin-bottom: 5%;
+}
+
+
+.teachers-name,
+.tsiw-name{
+    font-family: kola;
+    color: white;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.sylabus-container {
+    margin: 5%;
+}
+
+.sylabus-container-title {
+    font-family: kola;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#d9b967;
+    text-align: center;
+}
+
+.card-title {
+    font-family: kola;
+    font-size: large;
+    font-weight: bold;
+    color:#0e21a0;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.card-body span{
+    font-family: kola;
+    font-size:medium;
+    font-weight: bold;
+    color:#d9b967;
+}
+
+.card-text {
+    margin-top: 5%;
+    font-family: kode;
+    font-size:medium;
+    font-weight: bold;
+    color:#0e21a0;
+}
