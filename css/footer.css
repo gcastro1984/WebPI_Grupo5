@@ -1,7 +1,7 @@
 /* importar a fonte a usar */
 @font-face {
-    font-family: kola;
-    src: url(.//fonts/Kola-Regular.ttf)
+    font-family: sora_bold;
+    src: url(/fonts/Sora-Bold.otf)
 }
 
 
@@ -10,8 +10,9 @@ footer {
     position: relative;
     width: 100%;
     background: #0e21a0;
-    max-height: 200px;
-    margin-bottom: 0;
+    max-height: 300px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
     display: flexbox;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +22,7 @@ footer {
 
 /* formatar a class contacts */
 footer .contacts {
-    font-family: kola;
+    font-family: sora_bold;
     color: white;
     text-align: center;
     margin-top: 15px;
@@ -63,7 +64,7 @@ footer .social_icon li a:hover{
 /* formatar os a dos li da 2ª ul do footer do index.html */
 footer .menu li a {
     font-size: 0.8em;
-    font-family: kola;
+    font-family: sora_bold;
     color: white;
     margin: 0 10px;
     display: inline-block;
@@ -80,7 +81,7 @@ footer .menu li a:hover{
 
 /* formatar o paragrafo copyright do footer */
 footer p {
-    font-family: kola;
+    font-family: sora_bold;
     color: white;
     text-align: center;
     margin-top: 15px;

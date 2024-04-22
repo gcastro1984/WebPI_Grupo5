@@ -1,17 +1,30 @@
 
+
 @font-face {
-  font-family: kola;
-  src: url(.//fonts/Kola-Regular.ttf);
+  font-family: sora_extra_bold;
+  src: url(/fonts/Sora-ExtraBold.otf)
 }
 
 @font-face {
-  font-family: kode;
-  src: url(/fonts/KodeMono-Regular.ttf)
+  font-family: sora_bold;
+  src: url(/fonts/Sora-Bold.otf)
 }
+
+@font-face {
+  font-family: sora_medium;
+  src: url(/fonts/Sora-Medium.otf)
+}
+
+@font-face {
+  font-family: sora_light;
+  src: url(/fonts/Sora-Italic.otf)
+}
+
+
+
 
 body #parallax-tsiw {
   margin-bottom: 0px;
-  background-color: #9d44c0;
 }
 
 .content-asset p {
@@ -33,7 +46,7 @@ body #parallax-tsiw {
 /**************************/
 
 #parallax-tsiw h1 {
-  font-family: kola;
+  font-family: sora_bold;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
@@ -43,21 +56,18 @@ body #parallax-tsiw {
 }
 
 #parallax-tsiw h2 {
-  font-family: kola;
+  font-family: sora_extra_bold;
   font-size: 100px;
   letter-spacing: 10px;
-  text-shadow: #0e21a0 -4px 4px;
   text-align: center;
   color: #d9b967;
-  font-weight:bold;
   text-transform: uppercase;
   z-index: 10;
-  opacity: .9;
 }
 
 #parallax-tsiw h3 {
   margin-top: 5%;
-  font-family: kola;
+  font-family: sora_medium;
   font-size: 14px;
   line-height: 0;
   font-weight: 400;
@@ -67,14 +77,14 @@ body #parallax-tsiw {
 }
 
 #parallax-tsiw p {
-  font-family: kode;
+  font-family: sora_light;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
 }
 
 .first-character {
-  font-family: kola;
+  font-family: sora_extra_bold;
   font-weight: 400;
   float: left;
   font-size: 84px;
@@ -130,8 +140,9 @@ body #parallax-tsiw {
 #parallax-tsiw .block {
   background: white;
   padding: 60px;
-  width: 820px;
-  margin: 0 auto;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
   text-align: justify;
 }
 
@@ -279,7 +290,7 @@ body #parallax-tsiw {
 
   #parallax-tsiw .block {
     padding: 30px;
-    width: 420px;
+    width: 100%;
   }
 
   #parallax-tsiw h3 {
