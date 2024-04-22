@@ -1,14 +1,15 @@
 
-
 @font-face {
-    font-family: kola;
-    src: url(.//fonts/Kola-Regular.ttf)
+    font-family: sora_extra_bold;
+    src: url(/fonts/Sora-ExtraBold.otf)
 }
 
 @font-face {
-    font-family: kode;
-    src: url(/fonts/KodeMono-Regular.ttf)
+    font-family: sora_bold;
+    src: url(/fonts/Sora-Bold.otf)
 }
+
+
 
 body {
     background-color: #9d44c0;
@@ -33,7 +34,7 @@ body {
 
 /* estilizar os links de navegação na navbar */
 .nav-link {
-    font-family: kola;
+    font-family: sora_extra_bold;
     font-weight:400;
     font-size: 20px;
     text-decoration: none;
@@ -73,7 +74,7 @@ li.active .nav-link:before,
 
 /* estilização da caixa search */
 .form-control {
-    font-family: kola;
+    font-family: sora_bold;
     font-weight:300;
     font-size: 15px;
     border-radius: 5px;
@@ -83,7 +84,7 @@ li.active .nav-link:before,
 
 /* estilização do botão login */
 .button-submit {
-    font-family: kola;
+    font-family: sora_bold;
     font-weight:300;
     font-size: 15px;
     background-color: #d9b967;
