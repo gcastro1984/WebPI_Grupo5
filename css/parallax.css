@@ -50,7 +50,7 @@ body #parallax-tsiw {
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
-  color: black;
+  color: white;
   padding: 0;
   margin: 0;
 }
@@ -73,7 +73,7 @@ body #parallax-tsiw {
   font-weight: 400;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: black;
+  color: white;
 }
 
 #parallax-tsiw p {
@@ -240,10 +240,10 @@ body #parallax-tsiw {
 }  
 
 .modal-button {
-  font-family: kola;
+  font-family: sora_bold;
   font-size: large;
   padding: 5px 25px;
-  border: solid 2px #0e21a0;
+  border: none;
   border-radius: 20px;
   color: #0e21a0;
   background-color: #d9b967;
@@ -252,7 +252,7 @@ body #parallax-tsiw {
 
 .modal-button:hover {
   background-color: #0e21a0;
-  border: solid 3px #9d44c0;
+  border: none;
   color: #d9b967;
   transform: scale(1.2)
 }
