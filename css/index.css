@@ -74,23 +74,27 @@ li.active .nav-link:before,
 
 /* estilização da caixa search */
 .form-control {
+    height: 41px;
     font-family: sora_bold;
     font-weight:300;
     font-size: 15px;
     border-radius: 5px;
-    border-width: 2px;
-    border-color: #d9b967;
+    border: none;
+   
+    
 }
 
 /* estilização do botão login */
 .button-submit {
+    margin-top: 5px;
+    height: 40px;
     font-family: sora_bold;
     font-weight:300;
     font-size: 15px;
     background-color: #d9b967;
     color: #0e21a0;
     border-radius: 5px;
-    border-width: 2px;
-    border-color: #d9b967;
+    border: none;
+    
 }
 
