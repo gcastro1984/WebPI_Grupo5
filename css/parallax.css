@@ -97,20 +97,11 @@ body #parallax-tsiw {
 
 
 /* formatação da primeira letra dos paragrafos entre imagens */ 
-.campus {
-  color: #0e21a0;
-}
-
-.web {
-  color: #0e21a0;
-}
-
-.infra {
-  color: #0e21a0;
-}
-
+.campus,
+.web,
+.infra,
 .employee {
-  color: #0e21a0;
+  color: white;
 }
 
 
@@ -161,6 +152,17 @@ body #parallax-tsiw {
   opacity: 0.70;
 }
 
+#parallax-tsiw .one,
+#parallax-tsiw .three {
+  background-color: #4d2db7;
+  color: white;
+}
+
+#parallax-tsiw .two,
+#parallax-tsiw .four {
+  background-color: #9d44c0;
+  color: white;
+}
 
 
 /* Section - Parallax */
@@ -227,6 +229,8 @@ body #parallax-tsiw {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+
 
 
 /* estilização do botão Want to know more! */
@@ -301,11 +305,7 @@ body #parallax-tsiw {
   }
 
   #parallax-tsiw h2 {
-    font-size: 30px;
-  }
-
-  #parallax-tsiw .block {
-    padding: 30px;
+    font-size: 28px;
   }
 
   #parallax-tsiw .parallax-one,
@@ -338,7 +338,7 @@ body #parallax-tsiw {
 @media screen and (max-width: 479px) {
 
   #parallax-tsiw .block {
-    padding: 30px 15px;
-    width: 290px;
+    padding: 20px;
+    width: 100%;
   }
 }
