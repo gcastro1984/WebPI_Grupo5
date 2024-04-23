@@ -270,7 +270,7 @@ body #parallax-tsiw {
 /**************************/
 
 #parallax-tsiw .line-break {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid white;
   width: 150px;
   margin: 0 auto;
 }
