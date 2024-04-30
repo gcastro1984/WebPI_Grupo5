@@ -21,12 +21,12 @@ footer {
 }
 
 /* formatar a class contacts */
-footer .contacts {
+.contacts {
     font-family: sora_bold;
     color: white;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    justify-content: right;
+    text-align: right;
+    margin-bottom: 0px;
     font-size: 1em; 
 }
 
@@ -37,7 +37,9 @@ footer .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0;
+    padding: 0.5em;
+    margin-top: 1em;
+   
 }
 
 /* formatar os li das duas ul's do footer do index.html */
@@ -79,6 +81,12 @@ footer .menu li a:hover{
     font-size: 0.9em;
 } 
 
+/* formatar a faixa fundo que contem copyright do footer */
+.bottom {
+    padding: 1em;
+    background-color: #9d44c0;
+}
+
 /* formatar o paragrafo copyright do footer */
 footer p {
     font-family: sora_bold;
@@ -90,5 +98,44 @@ footer p {
 }
 
 
+/* para as colunas */
+.column {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 2em;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
+/* para as colunas do centro */
+.footer-center {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+
+}
+
+
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+.footer-logos img {
+    margin-top: 1em;
+    width: 5em;
+    display: flex;
+    flex-direction: column;
+}
 
