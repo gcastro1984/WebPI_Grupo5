@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Admin Events Page</title>
+    <link rel="stylesheet" href="/css/events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="logo"><img src="/images/logofinal.png" alt="Logo"></span>
+                <span></span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/html/adminhome.html">
+                        <span class="ti-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/testimonial.html">
+                        <span class="ti-comments"></span>
+                        <span>Testimonials</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/events.html">
+                        <span class="ti-agenda"></span>
+                        <span>Events</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/projects.html">
+                        <span class="ti-folder"></span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/users.html">
+                        <span class="ti-user"></span>
+                        <span>Users Accounts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/activities.html">
+                        <span class="ti-settings"></span>
+                        <span>Activities</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div>
+                
+            </div>
+
+            <div class="social-icons">
+                
+                <div></div>
+            </div>
+        </header>
+
+        <main class="overview">
+            <h2 class="dash-title">Active Content Overview</h2>
+
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-comments"></span>
+                        <div>
+                            <h5>Testimonials</h5>
+                            <h4>8</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="testimonial.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-agenda"></span>
+                        <div>
+                            <h5>Events</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="events.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-folder"></span>
+                        <div>
+                            <h5>Projects</h5>
+                            <h4>16</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/projects.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Users</h5>
+                            <h4>23</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/users.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Activities</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+    
+                    <div class="card-footer">
+                        <a href="/activities.html">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Events List</h3>
+
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="th-name">Event Name</th>
+                                        <th class="th-date">Date</th>
+                                        <th class="th-edition">Edition</th>
+                                        <th class="th-description">Description</th>
+                                        <th class="th-picture">Picture</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody id="tableEvent">
+                                    <tr>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td class="td-team">
+                                            <div class="img-0"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="New"  class="badge new">
+ 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>MAD Summer School</td>
+                                        <td>10/20-07-2019</td>
+                                        <td>2ª EDIÇÃO</td>
+                                        <td>Espaço de aprendizagem internacional em vários domínios como o Cinema, o Design Gráfico, o Desenvolvimento para a Web, a Fotografia e a Multimédia.</td>
+                                        <td class="td-team">
+                                            <div class="img-1"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Plug-in</td>
+                                        <td>15-01-2021</td>
+                                        <td>4ª EDIÇÃO</td>
+                                        <td>Evento que visa potenciar parcerias de estágios curriculares e desenvolvimento de projetos, integrar os finalistas no mercado de trabalho e apoiar as empresas no processo de seleção de perfis.</td>
+                                        <td class="td-team">
+                                            <div class="img-2"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>CSII - Sistemas Interativos e Intel.</td>
+                                        <td>18-05-2018</td>
+                                        <td>2ª EDIÇÃO</td>
+                                        <td>A 2.ª edição abordou temas como os Media Digitais, Inteligência Artificial e Novas Tendências da Web. A CSII é organizada em conjunto pelas Licenciaturas em TSIW e Multimédia.</td>
+                                        <td class="td-team">
+                                            <div class="img-3"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Drive</td>
+                                        <td>07-12-2018</td>
+                                        <td>2ª EDIÇÃO</td>
+                                        <td>Ciclo de conferências promovido pelo Mestrado em Design, com um foco especial nas temáticas da investigação procurando promover um encontro entre investigadores, profissionais e estudantes interessados na área do Design.</td>
+                                        <td class="td-team">
+                                            <div class="img-4"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>MAD Game Jam</td>
+                                        <td>26/28-02-2021</td>
+                                        <td>5ª EDIÇÃO</td>
+                                        <td>A competição MAD Game Jam, desafia as equipas a criarem, em 48 horas non-stop, videojogos cuja temática só vão conhecer no próprio dia. Ambiente fantástico e ótimos prémios são algumas razões para a comunidade gaming não perder este evento!</td>
+                                        <td class="td-team">
+                                            <div class="img-5"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Intermediartes</td>
+                                        <td>16/20-03-2018</td>
+                                        <td>2ª EDIÇÃO</td>
+                                        <td>Conjunto de atividades transdisciplinares que promovem uma visão global e integradora da ESMAD. Pode ser entendido como uma interface, como um espaço comum de diálogo entre diferentes áreas de Saber/Fazer.</td>
+                                        <td class="td-team">
+                                            <div class="img-6"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+
+
+                            
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+<script type="module" src="/js/views/EventsView.js"></script>
+</body>
+
+</html>

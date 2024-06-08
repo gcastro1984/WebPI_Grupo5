@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap');
 
 @font-face {
-    font-family: kola;
-    src: url(.//fonts/Kola-Regular.ttf)
+    font-family: sora_medium;
+    src: url(/fonts/Sora-Medium.otf)
 }
 
 body {

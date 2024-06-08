@@ -97,4 +97,10 @@ li.active .nav-link:before,
     border: none;
     
 }
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+ }
 

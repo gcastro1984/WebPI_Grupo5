@@ -1,7 +1,7 @@
 @font-face {
-    font-family: kola;
-    src: url(.//fonts/Kola-Regular.ttf)
-  }
+    font-family: sora_medium;
+    src: url(/fonts/Sora-Medium.otf)
+}
 
 
 
@@ -47,7 +47,7 @@
     margin-top: 5%;
     margin-bottom: 0%;
     width: 100%;
-    ~webkit-animation: mover 3s infinite alternate;
+    webkit-animation: mover 3s infinite alternate;
     animation: mover 3s infinite alternate-reverse;
 }
 

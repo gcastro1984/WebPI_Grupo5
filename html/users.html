@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Admin Testimonials Page</title>
+    <link rel="stylesheet" href="/css/users.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="logo"><img src="/logofinal.png" alt="Logo"></span>
+                <span></span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/html/adminhome.html">
+                        <span class="ti-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/testimonial.html">
+                        <span class="ti-comments"></span>
+                        <span>Testimonials</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/events.html">
+                        <span class="ti-agenda"></span>
+                        <span>Events</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/projects.html">
+                        <span class="ti-folder"></span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/users.html">
+                        <span class="ti-user"></span>
+                        <span>Users Accounts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/activities.html">
+                        <span class="ti-settings"></span>
+                        <span>Activities</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <header>
+            <div>
+                
+            </div>
+
+            <div class="social-icons">
+                
+                <div></div>
+            </div>
+        </header>
+
+        <main class="overview">
+            <h2 class="dash-title">Active Content Overview</h2>
+
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-comments"></span>
+                        <div>
+                            <h5>Testimonials</h5>
+                            <h4>8</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/testimonial.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-agenda"></span>
+                        <div>
+                            <h5>Events</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/events.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-folder"></span>
+                        <div>
+                            <h5>Projects</h5>
+                            <h4>16</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/projects.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Users</h5>
+                            <h4>23</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/users.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Activities</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+    
+                    <div class="card-footer">
+                        <a href="/activities.html">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Registered Users List</h3>
+
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="th-username">Username</th>
+                                        <th class="th-password">Password</th>
+                                        <th class="th-name">Name</th>
+                                        <th class="th-email">Email</th>
+                                        <th class="th-phone">Phone</th>
+                                        <th class="th-userType">Type</th>
+                                        <th class="th-score">Score</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody id="tableUser">
+                                    <tr>
+                                        <td class="th-username">---</td>
+                                        <td class="th-password">---</td>
+                                        <td class="th-name">---</td>
+                                        <td class="th-email">---</td>
+                                        <td class="th-phone">---</td>
+                                        <td class="th-userType">---</td>
+                                        <td class="th-score">---</td>
+                                        
+                                        <td class="td-status">                                            
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br></td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="New"  class="badge new"></input>
+ 
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="th-username">Paulo_Santos</td>
+                                        <td class="th-password">paulo_40220394</td>
+                                        <td class="th-name">Paulo Santos</td>
+                                        <td class="th-email">40220394@esmad.ipp.pt</td>
+                                        <td class="th-phone">963273813</td>
+                                        <td class="th-userType">Admin</td>
+                                        <td class="th-score">96 pts</td>
+
+                                        <td class="td-status">
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br>
+                                        </td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="Edit"  class="badge edit"></input>
+                                            <input type="submit" value="Delete"  class="badge delete"></input><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label></input>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="th-username">Gerson_Castro</td>
+                                        <td class="th-password">gerson_40220392</td>
+                                        <td class="th-name">Gerson Castro</td>
+                                        <td class="th-email">40220392@esmad.ipp.pt</td>
+                                        <td class="th-phone">963734854</td>
+                                        <td class="th-userType">Admin</td>
+                                        <td>126 pts</td>
+                                        
+                                        <td class="td-status">
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br>
+                                        </td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="Edit"  class="badge edit"></input>
+                                            <input type="submit" value="Delete"  class="badge delete"></input><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label></input>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="th-username">Paulo_Santos</td>
+                                        <td class="th-password">paulo_40220394</td>
+                                        <td class="th-name">Paulo Santos</td>
+                                        <td class="th-email">40220394@esmad.ipp.pt</td>
+                                        <td class="th-phone">963273813</td>
+                                        <td class="th-userType">user</td>
+                                        <td class="th-score">59 pts</td>
+                                        
+                                        <td class="td-status">
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br>
+                                        </td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="Edit"  class="badge edit"></input>
+                                            <input type="submit" value="Delete"  class="badge delete"></input><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label></input>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="th-username">Paulo_Santos</td>
+                                        <td class="th-password">paulo_40220394</td>
+                                        <td class="th-name">Paulo Santos</td>
+                                        <td class="th-email">40220394@esmad.ipp.pt</td>
+                                        <td class="th-phone">963273813</td>
+                                        <td class="th-userType">user</td>
+                                        <td class="th-score">59 pts</td>
+                                        
+                                        <td class="td-status">
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br>
+                                        </td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="Edit"  class="badge edit"></input>
+                                            <input type="submit" value="Delete"  class="badge delete"></input><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label></input>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="th-username">Paulo_Santos</td>
+                                        <td class="th-password">paulo_40220394</td>
+                                        <td class="th-name">Paulo Santos</td>
+                                        <td class="th-email">40220394@esmad.ipp.pt</td>
+                                        <td class="th-phone">963273813</td>
+                                        <td class="th-userType">user</td>
+                                        <td class="th-score">59 pts</td>
+                                        
+                                        <td class="td-status">
+                                            <input type="radio" id="active" name="status" value="Active">
+                                            <label for="active">Active</label><br>
+                                            <input type="radio" id="inactive" name="status" value="Inactive">
+                                            <label for="inactive">Inactive</label><br>
+                                        </td>
+                                        <td class="td-actions">
+                                            <input type="submit" value="Edit"  class="badge edit"></input>
+                                            <input type="submit" value="Delete"  class="badge delete"></input><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label></input>
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script type="module" src="/js/views/UsersView.js"></script>
+</body>
+
+</html>

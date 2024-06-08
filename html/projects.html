@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Admin Testimonials Page</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="logo"><img src="/logofinal.png" alt="Logo"></span>
+                <span></span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/html/adminhome.html">
+                        <span class="ti-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/testimonial.html">
+                        <span class="ti-comments"></span>
+                        <span>Testimonials</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/events.html">
+                        <span class="ti-agenda"></span>
+                        <span>Events</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/projects.html">
+                        <span class="ti-folder"></span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/users.html">
+                        <span class="ti-user"></span>
+                        <span>Users Accounts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/activities.html">
+                        <span class="ti-settings"></span>
+                        <span>Activities</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+        <header>
+            <div>
+                
+            </div>
+
+            <div class="social-icons">
+                
+                <div></div>
+            </div>
+        </header>
+
+        <main class="overview">
+            <h2 class="dash-title">Active Content Overview</h2>
+
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-comments"></span>
+                        <div>
+                            <h5>Testimonials</h5>
+                            <h4>8</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/testimonial.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-agenda"></span>
+                        <div>
+                            <h5>Events</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/events.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-folder"></span>
+                        <div>
+                            <h5>Projects</h5>
+                            <h4>16</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/projects.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Users</h5>
+                            <h4>23</h4>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="/users.html">View All</a>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-user"></span>
+                        <div>
+                            <h5>Activities</h5>
+                            <h4>4</h4>
+                        </div>
+                    </div>
+    
+                    <div class="card-footer">
+                        <a href="/activities.html">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Alumni Projects</h3>
+
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="th-name">Alumni Name</th>
+                                        <th class="th-date">Year</th>
+                                        <th class="th-project">Project</th>
+                                        <th class="th-summary">Summary</th>
+                                        <th class="th-poster">Video</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody id="tableProjects">
+                                    <tr>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td class="td-team">
+                                            <div class="img-0"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="New"  class="badge new">
+ 
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Alexandre Bessa</td>
+                                        <td>2020-2021</td>
+                                        <td>TEIM</td>
+                                        <td>A plataforma TEIM surgiu no âmbito de um projeto interdisciplinar da ESMAD, também designado por ESMAPP. Foi atribuído um cliente ao grupo, o qual pretendia uma plataforma móvel que melhore a organização dentro da empresa Frejen, ao permitir que seus funcionários registem suas tarefas diárias, assim como suas durações.</td>
+                                        <td class="td-team">
+                                            <div class="img-1"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Tiago Gabriel</td>
+                                        <td>2021-2022</td>
+                                        <td>AllerGenius</td>
+                                        <td>AllerGenius é uma app concetual sobre alergias alimentares, desenvolvida no âmbito do projeto ESMAPP do curso TSIW. O foco é a facilidade de utilização e providenciar uma experiência de valor para cada tipo de utilizador.</td>
+                                        <td class="td-team">
+                                            <div class="img-2"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Pedro Teixeira</td>
+                                        <td>2021-2022</td>
+                                        <td>Paw Share</td>
+                                        <td>Paw Share é uma app móvel dedicada ao bem-estar animal, apoiando cuidadores em situações desafiantes. Promoção de adopção responsável, a app facilita o cuidado temporário de animais de estimação.</td>
+                                        <td class="td-team">
+                                            <div class="img-3"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fábio Ferreira</td>
+                                        <td>2022-2023</td>
+                                        <td>Hubbersity</td>
+                                        <td>Hubbersity é uma app móvel que coloca os serviços básicos universitários na pala da mão, como marcação de refeições, pedidos no bar, pagar estacionamento.</td>
+                                        <td class="td-team">
+                                            <div class="img-4"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ana Freitas</td>
+                                        <td>2022-2023</td>
+                                        <td>FCM</td>
+                                        <td>FCM é uma aplicação mobile que dá a conhecer o movimento surrealista e as obras do mesmo presentes na Fundação Cupertino de Miranda.</td>
+                                        <td class="td-team">
+                                            <div class="img-5"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Rui Gonçalves</td>
+                                        <td>2021-2022</td>
+                                        <td>Applanta</td>
+                                        <td>Applanta é uma aplicação mobile educacional que tem como objectivos criar de forma divertida, única e musical de interagir com plantas, despertando um novo amor e curiosidade pela Flora.</td>
+                                        <td class="td-team">
+                                            <div class="img-6"></div>
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="Edit"  class="badge edit">
+                                            <input type="submit" value="Delete"  class="badge delete"><br>
+                                            <div class="status-check">
+                                                <input type="checkbox" value="Status" id="status"><label for="status">Status</label>
+                                            </div> 
+                                        </td>
+                                    </tr>
+
+
+
+                            
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+<script type="module" src="/js/views/ProjectsView.js"></script>
+</body>
+
+</html>

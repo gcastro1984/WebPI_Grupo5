@@ -1,11 +1,10 @@
 /* importar a fonte a usar */
 @font-face {
-    font-family: kola;
-    src: url(.//fonts/Kola-Regular.ttf)
+    font-family: sora_medium;
+    src: url(/fonts/Sora-Medium.otf)
 }
 
 @font-face {
-    font-family: kode;
-    src: url(/fonts/KodeMono-Regular.ttf)
+    font-family: sora_medium;
+    src: url(/fonts/Sora-Medium.otf)
 }
-

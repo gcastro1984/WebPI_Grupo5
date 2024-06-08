@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>User Home Page</title>
+    <link rel="stylesheet" href="../css/userhome.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+</head>
+
+<body>
+    <main class="overview">
+        <h2 class="dash-title">User Content Overview</h2>
+        <section class="recent">
+            <div class="activity-grid">
+                <div class="activity-card">
+
+                    <div class="container1">
+                        <form id="userinformation" method="post">
+                            <h2>User Information</h2>
+                            <div class="content1">
+                                <div class="input-box">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text"  name="name" required>
+                                </div>
+
+                                <div class="input-box">
+                                    <label for="username">Username</label>
+                                    <input id="username" type="text"  name="username" required>
+                                </div>
+
+                                <div class="input-box">
+                                    <label for="email">@ Email</label>
+                                    <input type="email" placeholder="Enter a valid email adress" name="email" required>
+                                </div>
+
+                                <div class="input-box">
+                                    <label for="phonenumber">Phone Number</label>
+                                    <input type="tel" placeholder="Enter a valid phone number" name="phoneNumber"
+                                        required>
+                                </div>
+
+                                <div class="input-box">
+                                    <label for="passwor">Password</label>
+                                    <input type="password" placeholder="Enter your password" name="password" required>
+                                </div>
+
+                                <div class="input-box" id="confirmpass">
+                                    <label for="confPassword">Confirm Password</label>
+                                    <input type="password" placeholder="Confirm your password" name="confirmPassword"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="content2">
+
+                                    <span class="user-title">User</span>
+                                    <div class="user-category">
+                                        <input type="radio" name="user" id="student">
+                                        <label for="user">Student</label>
+                                        <input type="radio" name="user" id="parent">
+                                        <label for="user">Parent</label>
+                                        <input type="radio" name="user" id="other">
+                                        <label for="user">Other</label>
+                                    </div>
+                                </div>
+
+                                <div class="user-icon-job">
+                                    <div class="icon-job">
+                                        <div class="input-box" id="inputavatar">
+                                            <label for="user-icon">User icon</label>
+                                            <img id="avatar" src="/Raquel_Silva.jpg" alt="user icon">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            <div class="alert">
+                                <p>By clicking "Edit user details", you can alter your account details!</p>
+                            </div>
+
+                            <div class="button-container">
+                                <button id="editinfo" type="submit">Edit user details!</button>
+                                <button id="confirminfo" type="submit">Submit Changes!</button>
+                            </div>
+
+                            <div class="alert">
+                                <p>By clicking "Submit Changes", you are altering your account details!<br>
+                                    You may receive email notification about the changed details.
+                                </p>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="container2">
+                        <h2>User Score</h2>
+                        <br>
+                        <div class="content">
+                            <div class="activity-category">
+                                <span class="activity-title">Virtual Tour</span>
+                                <p class="activity-score">13</p>
+                                <img class="activity-img" src="/coin.png">
+                            </div>
+
+                            <div class="activity-category">
+                                <span class="activity-title">Memory Game</span>
+                                <p class="activity-score">8</p>
+                                <img class="activity-img" src="/coin.png">
+                            </div>
+
+                            <div class="activity-category">
+                                <span class="activity-title">Quizz</span>
+                                <p class="activity-score">9</p>
+                                <img class="activity-img" src="/coin.png">
+                            </div>
+
+                            <div class="activity-category">
+                                <span class="activity-title">Drag And Drop</span>
+                                <p class="activity-score">7</p>
+                                <img class="activity-img" src="/coin.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="summary">
+                    <div class="summary-card">
+                        <h2>User Top Score</h2>
+                        <br>
+                        <div class="summary-single">
+                            <div class="number1"></div>
+                            <div>
+                                <h5>paulo_santos</h5>
+                                <small>136 pts</small>
+                            </div>
+                        </div>
+
+                        <div class="summary-single">
+                            <div class="number2"></div>
+                            <div>
+                                <h5>gerson_castro</h5>
+                                <small>135 pts</small>
+                            </div>
+                        </div>
+
+                        <div class="summary-single">
+                            <div class="number3"></div>
+                            <div>
+                                <h5>raquel_prates</h5>
+                                <small>106 pts</small>
+                            </div>
+                        </div>
+
+                        <div class="summary-single">
+                            <div class="number4"></div>
+                            <div>
+                                <h5>hugo_lima</h5>
+                                <small>78 pts</small>
+                            </div>
+                        </div>
+
+                        <div class="summary-single">
+                            <div class="number5"></div>
+                            <div>
+                                <h5>elisa_pinto</h5>
+                                <small>61 pts</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary">
+                        <div class="summary-card">
+                            <h2>User Total Score</h2>
+                            <br>
+                            <div class="summary-single">
+                                <div class="user-totalscore"></div>
+                                <div>
+                                    <h5>ines_pereira</h5>
+                                    <small>37 pts</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+
+<script type="module" src="/js/views/UserhomeView.js"></script>
+</body>
+
+</html>
