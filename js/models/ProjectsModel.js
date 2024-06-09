@@ -22,7 +22,7 @@ export function init(){
 
 //adicionar Projecto
 
-export function add(name, studentName,text,year,url,active=true) {
+export function add(studentName,year,name,text,url,active=true) {
 
     if(projects.some((project) => project.name === name)) {
         throw Error(` The Project of ${name} already exists`)
@@ -37,7 +37,7 @@ export function add(name, studentName,text,year,url,active=true) {
 
 //Alterar Projecto
 
-export function change(name, studentName,text,year,url,active=true,posicao) {
+export function change(studentName,year,name,text,url,active=true,posicao) {
     //posicao do array
 
     projects[posicao].name = name

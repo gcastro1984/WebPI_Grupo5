@@ -12,10 +12,10 @@ function tableProjects(){
     <td>---</td>
     <td>---</td>
     <td class="td-team">
-    <div class="img-0"></div>
+    <div ></div>
      </td>
         <td>
-        <input type="submit" value="New"  class="badge new">
+        <input type="submit" value="New"  class="badge new" id=new>
  
          </td>
     </tr>`
@@ -74,15 +74,24 @@ function tableProjects(){
 
             if(btn.value=="Edit"){
                 for(let i=0; i<cells.length-1; i++){
+                    
+                    if(i==4){
+                        let cellValue = cells[i]
+
+                         cells[i].innerHTML = `<input type="url" value=${cellValue.firstChild.src}}"class="responsive-table data" id="youtubeVideo" width= 100 placeholder="URL"  required">`
+
+                    }else{
                     let cellValue = cells[i].innerText
+                    console.log(cellValue)
                     cells[i].innerHTML = `<input type="text" class="responsive-table data" value="${cellValue}" required>`
+                }
                     
                 } 
                 
 
                 btn.value ="Save"
                 //ALterar coluna 3 para fazer upload imagem
-                cells[4].innerHTML = `<input type="url" class="img-4" id="youtubeVideo" width= 30 placeholder="URL ">`
+               
                 //satus deve estar ativo no modo ediçao
                 row.querySelector("#status").disabled = false;
 
@@ -99,17 +108,17 @@ function tableProjects(){
                         let status = cells[5].querySelector('#status').checked
                     
 
-                        imgsrc = imgsrc.replace("C:\\fakepath\\","/images/eventos/")
+                        
 
                       
                 // convert o valor para um inteiro e ajusta à correta posição no array
                 let posicao =parseInt(row.rowIndex)-2
                 // chama a funçao edit
 
-                Project.change(studentName, date, edition, text,imgsrc,status,posicao)
-                alert("Projecto editado com sucesso!")
+                Project.change(studentName, year, name, text,url,status,posicao)
+                alert("Project edited with sucess!")
                 //carrega novamente a tabela
-                tableEvents()
+                tableProjects()
                 //refresh à pagina 
                 location.reload()
 
@@ -132,7 +141,7 @@ for (const btn of btnsRemove){
 
         if(confirm("Are you sure you want delete this event?")) {
 
-            Event.remove(cellValue)
+            Project.remove(cellValue)
             location.reload();
 
         }
@@ -160,26 +169,26 @@ btnNew.addEventListener('click',(e)=> {
             
         } 
         btnNew.value ="Save"
-                //ALterar coluna 3 para fazer upload imagem
-                newCells[4].innerHTML = `<input type="file" id="img" name="img" accept="image/* defaultImgSrc:../images/eventos">`
+                
+                newCells[4].innerHTML = `<input type="url" class="responsive-table data" id="youtubeVideo" width= 30 placeholder="URL ">`
 
 
     }else{
 
-        let name = newCells[0].querySelector('input').value;
-        let date = newCells[1].querySelector('input').value
-        let edition = newCells[2].querySelector('input').value
+        let studentName = newCells[0].querySelector('input').value;
+        let year = newCells[1].querySelector('input').value
+        let name = newCells[2].querySelector('input').value
         let text = newCells[3].querySelector('input').value
-        let imgsrc= newCells[4].querySelector('input').value
+        let url= newCells[4].querySelector('input').value
      
     
 
-        imgsrc = imgsrc.replace("C:\\fakepath\\","/images/eventos/")
+        
 
-        Event.add(name,date,edition,text,imgsrc)
-        alert("Evento adicionado com sucesso!")
+        Project.add(studentName, year, name, text,url)
+        alert(`${name} add with sucess` )
         //carrega novamente a tabela
-        tableEvents()
+        tableProjects()
         //refresh à pagina 
         location.reload()
 
