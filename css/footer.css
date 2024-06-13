@@ -22,11 +22,11 @@ footer {
 
 /* formatar a class contacts */
 .contacts {
+    padding: 10px;
     font-family: sora_bold;
     color: white;
     justify-content: right;
     text-align: right;
-    margin-bottom: 0px;
     font-size: 1em; 
 }
 
@@ -37,8 +37,6 @@ footer .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5em;
-    margin-top: 1em;
    
 }
 
@@ -93,7 +91,6 @@ footer p {
     color: white;
     text-align: center;
     margin-top: 15px;
-    margin-bottom: 10px;
     font-size: 0.8em;   
 }
 

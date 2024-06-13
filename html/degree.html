@@ -71,7 +71,7 @@
       <h3 class="teachers-vision">The vision and leadership of the degree coordinators, the TSIW degree is constantly adapting 
         to market demands, ensuring that its students are always prepared for the future challenges.</h3>
       <br>
-      <img src="/images/Mario Pinto Ricardo Queirós 2.jpg" alt="Mário Pinto e Ricardo Queirós">
+      <img class="teachers-img"  src="/images/Mario Pinto Ricardo Queirós 2.jpg" alt="Mário Pinto e Ricardo Queirós">
       <h1 class="teachers-name">Mário Pinto e Ricardo Queirós</h1>
       <hr class="line">
       <h1 class="tsiw-name">TSIW Degree Coordinators</h1>
@@ -131,7 +131,7 @@
   </div>
 </div>
 
-
+<button id="quizz"  type="submit">Let's Play</button>
 
   <footer>
     <!--Footer-->
@@ -292,7 +292,123 @@
     </div>
   </div>
 
+<!-- Modal Login -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="frmLogin">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="username" class="form-control" id="txtUsername" placeholder="Enter a valid username" name="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" name="password" required>
+          </div>
+          <div class="mb-3">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+          <div class="mb-3">
+            <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#register-modal">Register Here!</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="msgLogin"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Register Modal -->
+<div class="modal fade" id="register-modal" aria-labelledby="registerModalLabel" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+          <form id="registerUser">
+          <div class="input-box">
+              <label for="name">Full Name</label>
+              <input id="txtregname" type="text" placeholder="Enter full name" name="name" required>
+          </div>
+
+          <div class="input-box">
+              <label for="username">Username</label>
+              <input id="txtregeusername" type="text" placeholder="Enter username" name="username" required>
+          </div>
+
+          <div class="input-box">
+              <label for="email">@ Email</label>
+              <input id="txtregemail" type="email" placeholder="Enter a valid email adress" name="email" required>
+          </div>
+
+          <div class="input-box">
+              <label for="phonenumber">Phone Number</label>
+              <input id="regphone" type="tel" placeholder="Enter a valid phone number" name="phoneNumber" required>
+          </div>
+
+          <div class="input-box">
+              <label for="password">Password</label>
+              <input id="txtregpass" type="password" placeholder="Enter your password" name="password" required>
+          </div>
+
+          <div class="input-box">
+              <label for="confPassword">Confirm Password</label>
+              <input id="txtregconfpass" type="password" placeholder="Confirm your password" name="confirmPassword" required>
+          </div>
+
+
+          <span class="user-title">User</span>
+          <div class="user-category">
+              <input type="radio" name="user" value="student" id="r">
+              <label for="user">Student</label>
+              <input type="radio" name="user" value="parent">
+              <label for="user">Parent</label>
+              <input type="radio" name="user" value="other">
+              <label for="user">Other</label>
+          </div>
+      </div>
+
+      <div class="alert">
+          <p>By clicking Sign Up, you agree with our <a href="#">Terms</a>,<a href="#"> Privacy Policy</a> and 
+              <a href="#"> Cookies Policy.</a> <br>
+              You may receive email notifications from us, and can opt out any time.
+          </p>
+      </div>
+
+      <div class="button-container">
+          <button type="submit">Register</button>
+      </div>
+    </form>
+
+      <div class="alert">
+          <p>Already have an account? <a a href="#" data-bs-toggle="modal" data-bs-target="#login-modal">Login Here!</a></p>
+      </div>
+
+
+  </form>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
    <!-- Optional JavaScript -->
    <script type="module" src="/js/views/DegreeView.js"></script>
    <script type="module" src="/js/views/NavbarView.js"></script>

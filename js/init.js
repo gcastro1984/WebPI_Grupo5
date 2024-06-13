@@ -186,7 +186,7 @@ if (!localStorage.users) {
         email:"user1@example.com",
         phone:"914497241",
         type:"admin",
-        score:0,
+        score:20,
         active: true,
         avatar:"/images/avatar/avatar.png"
       },
@@ -197,7 +197,7 @@ if (!localStorage.users) {
         email:"user2@example.com",
         phone:"914497241",
         type:"admin",
-        score:0,
+        score:30,
         active:true,
         avatar:"/images/avatar/ninja.png"
       },
@@ -266,9 +266,9 @@ if(!localStorage.events){
       {
         name : "Plug-in",
         date:"10/20-07-2019",
-        imgsrc:"/images/eventos/plug_in.jpg",
-        text:"Plug-in is an annual event, organized by ESMAD, which brings together the ESMAD community with potential business partners, in order to promote opportunities for curricular internships.",
         edition:"4ªEdiçao",
+        text:"Plug-in is an annual event, organized by ESMAD, which brings together the ESMAD community with potential business partners, in order to promote opportunities for curricular internships.",
+        imgsrc:"/images/eventos/plug_in.jpg",
         active:true,
     
 
@@ -278,9 +278,9 @@ if(!localStorage.events){
       {
         name:"Drive",
         date:"07-12-2018",
-        imgsrc:"/images/eventos/drive2th.jpg",
-        text:"Evento que visa potenciar parcerias de estágios curriculares e desenvolvimento de projetos, integrar os finalistas no mercado de trabalho e apoiar as empresas no processo de seleção de perfis.",
         edition:"2ªEdiçao",
+        text:"Evento que visa potenciar parcerias de estágios curriculares e desenvolvimento de projetos, integrar os finalistas no mercado de trabalho e apoiar as empresas no processo de seleção de perfis.",
+        imgsrc:"/images/eventos/drive2th.jpg",
         active:true,
     
 
@@ -288,9 +288,9 @@ if(!localStorage.events){
       {
         name : "Mad Game Jam",
         date:"07-12-2018",
-        imgsrc:"/images/eventos/madgamejam.5th.jpg",
-        text:"The MAD Game Jam competition challenges teams to create, in 48 non-stop hours, video games whose theme they will only learn about on the same day. Fantastic atmosphere and great prizes are some reasons for the gaming community not to miss this event!",
         edition:"7ªEdiçao",
+        text:"The MAD Game Jam competition challenges teams to create, in 48 non-stop hours, video games whose theme they will only learn about on the same day. Fantastic atmosphere and great prizes are some reasons for the gaming community not to miss this event!",
+        imgsrc:"/images/eventos/madgamejam.5th.jpg",
         active:true,
     
 
@@ -298,9 +298,9 @@ if(!localStorage.events){
       {
         name : "GamifyIt",
         date:"07-12-2018",
-        imgsrc:"/images/eventos/gamify.jpg",
-        text:"GamifyIt aims to present the Erasmus+ FGPE project and promotes good gamification practices through two app competitions",
         edition:"7ªEdiçao",
+        text:"GamifyIt aims to present the Erasmus+ FGPE project and promotes good gamification practices through two app competitions",
+        imgsrc:"/images/eventos/gamify.jpg",
         active:true,
     
 
@@ -311,63 +311,74 @@ if(!localStorage.events){
     ]
 
     events.forEach((event)=>{
-      Event.add(event.name, event.date, event.imgsrc,event.text,event.edition,event.active);
+      Event.add(event.name, event.date, event.edition,event.text,event.imgsrc,event.active);
   
       });
 
 }
 if(!localStorage.projects){
   const projects = [
-      
+
       {
-        name:"ShopFloor da Confeçao",  
-        studentName : "Pedro Sousa",
+        name:"Design Tokens",  
+        studentName : "Beatriz Lopes",
+        partner:"BindTunning",
         text:"",
         year:"2023",
-        url:"https://www.youtube.com/embed/Qg1TDS5LVXw?si=84oUdDlVIeO9H09h",
+        imgsrc:"/images/projectos/Beatriz Lopes.jpg",
+        url:"https://www.youtube.com/embed/hOpRyUDhx1k?si=wtncz6fv32_CAymV",
         active:true,
     
 
       },
 
             
+
       {
-        name:"Innoscope",  
-        studentName : "JoanaPortugal",
+        name:"Plataforma Web",  
+        studentName : "Gonçalo Gama",
+        partner:"Riopele",
         text:"",
         year:"2023",
-        url:"https://www.youtube.com/embed/8J0Qoh_GY2U?si=vIL-PWl51uxu3WVW",
+        imgsrc:"/images/projectos/Gonçalo Gama.jpg",
+        url:"https://www.youtube.com/embed/Zit1YOjSaok?si=fsMDnYbVNO3qh1yg",
         active:true,
     
 
       },
       {
-        name:"NONIUS",  
+        name:"Media Asset Management",  
+        studentName : "Luís Gomes",
+        partner:"MOG",
+        text:"",
+        year:"2023",
+        imgsrc:"/images/projectos/Luis Gomes.jpg",
+        url:"https://www.youtube.com/embed/opE_ThSVI2g?si=JJ-FCHgvQoUEIKIs",
+        active:true,
+    
+
+      },
+      {
+        name:"Quality Assurance Testing",  
         studentName : "Marco Malta",
+        partner:"NONIUS",
         text:"",
         year:"2023",
-        url:"https://www.youtube.com/embed/BC5W3daFLGU?si=04RSBC83m51I2TjB",
+        imgsrc:"/images/projectos/Marco Malta.jpg",
+        url:"https://www.youtube.com/embed/BC5W3daFLGU?si=ho6dsmOKofym2csp",
         active:true,
     
-    
-
-      },
-      {
-        name:"Frejen",  
-        studentName : "Ana Freitas",
-        text:"",
-        year:"2023",
-        url:"https://www.youtube.com/embed/D9x6s8Z9aAc?si=25-0F99b7hTW0aNs",
-        active:true,
 
       },
       
-    
+
+
+
     
     ]
 
     projects.forEach((project)=>{
-      Project.add(project.name, project.studentName, project.text,project.year,project.url,project.active);
+      Project.add(project.name, project.studentName,project.partner,project.text,project.year,project.imgsrc,project.url,project.active=true);
   
       });
     }

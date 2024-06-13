@@ -11,6 +11,8 @@ function tableProjects(){
      <td>---</td>
     <td>---</td>
     <td>---</td>
+    <td>---</td>
+    <td>---</td>
     <td class="td-team">
     <div ></div>
      </td>
@@ -37,7 +39,7 @@ function tableProjects(){
     
     function generateLineTable(project) {
     
-        let result=`<tr><td>${project.studentName}</td><td>${project.year}</td><td>${project.name}</td><td>${project.text}</td><td><iframe 
+        let result=`<tr><td>${project.studentName}</td><td>${project.year}</td><td>${project.name}</td><td>${project.partner}</td><td>${project.text}</td> <td><img src="${project.imgsrc}" class="img-4"</div></td><td><iframe 
                     id="iframeVideo" 
                     title ="youtube video"
                     height="60" 
@@ -66,6 +68,7 @@ function tableProjects(){
 
             //guarda a linha onde o evento edit foi ativado
             const row = e.target.parentElement.parentElement;
+           
             
             // guarda as celulas da linha onde o evento edit foi ativado
             const cells = row.getElementsByTagName('td');
@@ -75,19 +78,19 @@ function tableProjects(){
             if(btn.value=="Edit"){
                 for(let i=0; i<cells.length-1; i++){
                     
-                    if(i==4){
+                    if(i==6){
                         let cellValue = cells[i]
 
-                         cells[i].innerHTML = `<input type="url" value=${cellValue.firstChild.src}}"class="responsive-table data" id="youtubeVideo" width= 100 placeholder="URL"  required">`
+                         cells[i].innerHTML = `<input type="url" value=${cellValue.firstChild.src}}"class="responsive-table data" id="youtubeVideo" width= 100 placeholder="URL" ">`
 
                     }else{
                     let cellValue = cells[i].innerText
-                    console.log(cellValue)
+            
                     cells[i].innerHTML = `<input type="text" class="responsive-table data" value="${cellValue}" required>`
                 }
                     
                 } 
-                
+                   cells[5].innerHTML = `<input type="file" id="img" name="img" accept="image/* defaultImgSrc:../images/projectos/" required>`
 
                 btn.value ="Save"
                 //ALterar coluna 3 para fazer upload imagem
@@ -102,20 +105,25 @@ function tableProjects(){
                         let studentName = cells[0].querySelector('input').value;
                         let year = cells[1].querySelector('input').value
                         let name = cells[2].querySelector('input').value
-
-                        let text = cells[3].querySelector('input').value
-                        let url= cells[4].querySelector('input').value
-                        let status = cells[5].querySelector('#status').checked
+                        let partner = cells[3].querySelector('input').value
+                        let text = cells[4].querySelector('input').value
+                        let imgsrc=cells[5].querySelector('input').value
+                        let url= cells[6].querySelector('input').value
+                        let status = cells[7].querySelector('#status').checked
                     
 
-                        
+         
 
                       
                 // convert o valor para um inteiro e ajusta à correta posição no array
                 let posicao =parseInt(row.rowIndex)-2
+
                 // chama a funçao edit
 
-                Project.change(studentName, year, name, text,url,status,posicao)
+                Project.change(name,studentName,partner,text,year,name,imgsrc,url,status,posicao)
+
+  
+                
                 alert("Project edited with sucess!")
                 //carrega novamente a tabela
                 tableProjects()
@@ -178,14 +186,17 @@ btnNew.addEventListener('click',(e)=> {
         let studentName = newCells[0].querySelector('input').value;
         let year = newCells[1].querySelector('input').value
         let name = newCells[2].querySelector('input').value
-        let text = newCells[3].querySelector('input').value
-        let url= newCells[4].querySelector('input').value
+        let partner = newCells[3].querySelector('input').value
+        let text = newCells[4].querySelector('input').value
+        let imgsrc=newCells[5].querySelector('input').value
+        let url= newCells[6].querySelector('input').value
+       
      
     
 
         
 
-        Project.add(studentName, year, name, text,url)
+        Project.add(name,studentName,partner,text,year,imgsrc,url,active=true)
         alert(`${name} add with sucess` )
         //carrega novamente a tabela
         tableProjects()

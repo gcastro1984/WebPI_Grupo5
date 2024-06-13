@@ -10,7 +10,7 @@ export function init(){
     const tempEvents= JSON.parse(localStorage.events)
     for (let event of tempEvents) {
 
-        events.push(new Event(event.name, event.date, event.imgsrc,event.text,event.edition,event.active))
+        events.push(new Event(event.name, event.date,event.edition,event.text,event.imgsrc,event.active))
 
         }
     } else{
@@ -22,13 +22,13 @@ export function init(){
 
 //adicionar Evento
 
-export function add(name, date,imgsrc, text,edition,active=true) {
+export function add(name,date,edition,text,imgsrc,active=true) {
 
     if(events.some((event) => event.name === name)) {
         throw Error(` The Event of ${name} already exists`)
 
     }else {
-        events.push(new Event(name, date, imgsrc,text,edition,active=true));
+        events.push(new Event(name,date,edition,text,imgsrc,active=true));
         localStorage.setItem("events", JSON.stringify(events))
 
     }
@@ -74,7 +74,7 @@ export function remove(name) {
 
 //Obter todos os eventos
 
-export function getevents(){
+export function getEvents(){
 
     return events
 
@@ -86,18 +86,18 @@ export function getevents(){
 class Event{
     name = "";
     date=""
-    imgsrc="";
+    edition=""; 
     text="";
-    edition="";
+    imgsrc="";
     active="";
 
 
-    constructor(name, date, imgsrc,text,edition,active=true){
+    constructor(name,date,edition,text,imgsrc,active=true){
     this.name = name;
     this.date = date;
-    this.imgsrc=imgsrc;
-    this.text = text
     this.edition=edition
+    this.text = text
+    this.imgsrc=imgsrc;
     this.active=active
     
     }

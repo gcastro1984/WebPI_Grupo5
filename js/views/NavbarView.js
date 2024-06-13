@@ -9,7 +9,7 @@ function navbarView() {
 
     let result =` <div class="container-fluid">
     <!--Logo e marca-->
-    <img class="navbar-brand" src="/images/logofinal.png" alt="TSIW" width="120" height="50">
+    <a href="/index.html"><img class="navbar-brand" src="/images/logofinal.png" alt="TSIW" width="120" height="50"></a>
 
     <!--Botão toggler e nav-links-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -39,9 +39,9 @@ function navbarView() {
 
 if (User.isLogged()){
   result +=`<div id="authButtons" class="ms-auto m-1">
-  Olá <a href="html/userhome.html?username=${User.getUserLogged().username}',
+  Olá <a href="/html/userhome.html?username=${User.getUserLogged().username}',
   '_blank">${User.getUserLogged().username}</a>
-  <button id="btnLogout" class="btn btn-outline-success m-2 my-sm-0">
+  <button  id="btnLogout" class="btn btn-outline-success m-2 my-sm-0 class="modal-button"">
       Logout
   </button>
   <img id="avatar" src="${User.getUserLogged().avatar}" alt="Avatar" class="avatar">
@@ -99,13 +99,13 @@ document.querySelector("#avatar")?.addEventListener("click", () => {
 
   if(User.getUserLogged().type=="admin"){
     window.open(
-      'html/adminhome.html?username=${User.getUserLogged().username}',
+      '/html/adminhome.html?username=${User.getUserLogged().username}',
       '_blank') // <- Th
 
   }
   //window.location.href=`html/userhome.html?username=${User.getUserLogged().username} "_blank"`
   window.open(
-  'html/userhome.html?username=${User.getUserLogged().username}',
+  '/html/userhome.html?username=${User.getUserLogged().username}',
   '_blank' // <- This is what makes it open in a new window.
 );
 

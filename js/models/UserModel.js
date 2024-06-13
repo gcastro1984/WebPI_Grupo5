@@ -26,7 +26,7 @@ export function add(username, password, name, email,phone,type,score,active,avat
         
         users.push(new User(username, password, name, email,phone,type,score,active,avatar))
         localStorage.setItem("users",JSON.stringify(users))
-        alert("Sucess")
+    
         
     }
 }
@@ -85,13 +85,31 @@ export function getUserLogged(){
 
 //saber a posicao do utilizador no array
 export function findIndexUser(username){
-    init()
-    const userIndex = users.findIndex(user => user.username === username)
+    
+    const userIndex = users.findIndex(user => user.username == username)
     return  userIndex
   
         }
     
+export function updateScore(score){
+    let UserLogged=getUserLogged()
+    const tempUsers = JSON.parse(localStorage.users)
 
+
+    for (const user of tempUsers) {
+       
+        if(user.username==UserLogged.username){
+            
+            user.score+=score
+            sessionStorage.setItem("loggedUser", JSON.stringify(user))
+
+        }
+        localStorage.setItem("users",JSON.stringify(tempUsers))
+        
+    }
+    
+    //localStorage.setItem("users",JSON.stringify(users))
+}
   
     
 export function getUsers(){
@@ -103,7 +121,6 @@ export function getUsers(){
 // Remover Utilizador
 
 export function remove(username) {
-    console.log(username)
     //cria um novo array filtrando os que são diferentes do username atraves da função  
     users=users.filter((user)=>user.username !== username);
  
@@ -146,11 +163,19 @@ export function addAdmin(username, password, name, email,phone,type,score){
         
         users.push(new User(username, password, name, email,phone,type,score))
         localStorage.setItem("users",JSON.stringify(users))
-        alert("Sucess")
+        
         
     }
 }
 
+
+//Funcao que envia os utilizadores por ordem pontual
+
+export function userClassification(){
+    users.sort((a,b)=>(a.score<b.score) ? 1:-1)
+    console.log(users)
+    return users
+}
 
 //Classe  User
 

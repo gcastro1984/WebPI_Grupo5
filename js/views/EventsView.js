@@ -19,7 +19,7 @@ function tableEvents(){
         </td>
     </tr>`
 
-        let events=Event.getevents()
+        let events=Event.getEvents()
 
         //Injetar no card o numero de eventos
         //document.querySelector("#eventslenght").innerHTML=events.length
@@ -39,7 +39,6 @@ function tableEvents(){
         let result=`<tr><td>${event.name}</td><td>${event.date}</td><td>${event.edition}</td><td>${event.text}</td><td><img src="${event.imgsrc}" class="img-4"</div></td><td><input type="submit" value="Edit"  class="badge edit"><input type="submit" value="Delete"  class="badge delete"><div class="status-check">
         <input type="checkbox" data-id="${event.active}" ${event.active ?"checked":"" } id="status" disabled><label for="status">Status</label>
     </div> </td></tr>`
-    
       return result
     }  
 
@@ -101,7 +100,7 @@ function tableEvents(){
                 // chama a funçao edit
 
                 Event.change(name, date, edition, text,imgsrc,status,posicao)
-                alert("Evento editado com sucesso!")
+                alert(`${name} change with sucess`)
                 //carrega novamente a tabela
                 tableEvents()
                 //refresh à pagina 

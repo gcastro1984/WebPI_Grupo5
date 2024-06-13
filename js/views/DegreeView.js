@@ -1,6 +1,7 @@
 import * as CurricularUnit from "../models/DegreeModel.js";
+import { getUserLogged } from "../models/UserModel.js";
 
-renderDegree()
+
 
 function renderDegree() {
   let curricularUnits = CurricularUnit.init() 
@@ -26,3 +27,18 @@ let first2=`<br><span>Second Semester</span>`
   
   }
 }
+renderDegree()
+
+
+let ativity= document.querySelector("#quizz")
+ativity.addEventListener("click", () => {
+
+  
+    window.open(
+      '/Quizz/quizz.html',
+      '_blank') 
+      
+
+  }
+  
+)

@@ -78,7 +78,7 @@
         <h2>ESMAD</h2>
         <br>
         <div class="modal-btn-center">
-          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#register-modal">" Know
+          <button class="modal-button" type="button" data-bs-toggle="modal" data-bs-target="#register-modal">" Know
             More! "</button>
         </div>
       </div>
@@ -216,88 +216,91 @@
 
   <footer>
     <!--Footer-->
-
-    <div class="row first">
-      <div class="column footer-left">
-        <div class="footer-logos">
-          <a href="#"><img src="/images/icons e logos/PPorto_branco_vazado.png" alt="Logo P.Porto"></a>
-        </div>
-
-      </div>
-
-      <div class="column footer-center">
-        <!-- inserir logo da aplixcação web -->
-        <div class="footer-logos">
-          <a href="#"><img src="/images/logofinal.png" alt="Logo P.Porto"></a>
-        </div>
-      </div>
-
-      <div class="column footer-right">
-
-      </div>
-    </div>
-
-    <div class="row second">
-      <div class="column footer-left">
-        <div class="footer-logos">
-          <a href="#"><img src="/images/icons e logos/Logotipo ESMAD -Branco.png" alt="Logo ESMAD"></a>
-        </div>
-      </div>
-
-      <div class="column footer-center">
-        <!-- inserir lista para os nav links do footer -->
-        <ul class="menu">
-
-          <!-- inserir os itens li da ul para os nav links do footer -->
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/html/campus.html">Campus</a></li>
-          <li><a href="/html/degree.html">Degree</a></li>
-          <li><a href="/html/alumni.html">Alumni</a></li>
-          <li><a href="/html/future.html">Future You</a></li>
-        </ul>
-
-        <!-- inserir lista para os icons do footer -->
-        <ul class="social_icon">
-
-          <!-- inserir os itens li da ul para os icons do footer -->
-          <li><a href="#">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-          <li><a href="#">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li><a href="#">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a></li>
-          <li><a href="#">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li><a href="#">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-        </ul>
-      </div>
-
-      <div class="column footer-right">
-        <br>
-        <!-- inserir paragrafo para escola e morada -->
-        <div class="contacts">
-          <p>Escola Superior de Media Artes e Design</p>
-          <p>D. Sancho I, 981 4480-876 Vila do Conde Portugal</p>
-          <p>+351 252 291 700 | geral@esmad.ipp.pt</p>
-        </div>
-      </div>
+    <!-- inserir paragrafo para escola e morada -->
+    <div class="contacts">
+      <p>Escola Superior de Media Artes e Design</p>
+      <p>D. Sancho I, 981 4480-876 Vila do Conde Portugal</p>
+      <p>+351 252 291 700 | geral@esmad.ipp.pt</p>
     </div>
 
 
+    <!-- inserir lista para os icons do footer -->
+    <ul class="social_icon">
 
-    <div class="row bottom">
-      <!-- inserir paragrafo para copyright-->
-      <br>
-      <p>© 2024  |  All Rights Reserved</p>
-      <br>
-    </div>
+      <!-- inserir os itens li da ul para os icons do footer -->
+      <li><a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li><a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li><a href="#">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a></li>
+      <li><a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li><a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+
+    <!-- inserir lista para os nav links do footer -->
+    <ul class="menu">
+
+      <!-- inserir os itens li da ul para os nav links do footer -->
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="./campus.html">Campus</a></li>
+      <li><a href="./degree.html">Degree</a></li>
+      <li><a href="./alumni.html">Alumni</a></li>
+      <li><a href="./future.html">Future You</a></li>
+    </ul>
+
+    <!-- inserir paragrafo para copyright-->
+    <p>© 2024 | All Rights Reserved</p>
+
   </footer>
+
+  <!-- Modal Login -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="frmLogin">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="username" class="form-control" id="txtUsername" placeholder="Enter a valid username" name="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" name="password" required>
+          </div>
+          <div class="mb-3">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+          <div class="mb-3">
+            <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#register-modal">Register Here!</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="msgLogin"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -351,41 +354,41 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="content">
+        <div class="content mb-3">
           <form id="registerUser">
-          <div class="input-box">
-              <label for="name">Full Name</label>
-              <input id="txtregname" type="text" placeholder="Enter full name" name="name" required>
+          <div class="mb-3" >
+              <label for="name" class="form-label">Full Name</label>
+              <input id="txtregname" class="form-control" type="text" placeholder="Enter full name" name="name" required>
           </div>
 
           <div class="input-box">
               <label for="username">Username</label>
-              <input id="txtregeusername" type="text" placeholder="Enter username" name="username" required>
+              <input id="txtregeusername" class="form-control" type="text" placeholder="Enter username" name="username" required>
           </div>
 
           <div class="input-box">
               <label for="email">@ Email</label>
-              <input id="txtregemail" type="email" placeholder="Enter a valid email adress" name="email" required>
+              <input id="txtregemail" class="form-control" type="email" placeholder="Enter a valid email adress" name="email" required>
           </div>
 
           <div class="input-box">
               <label for="phonenumber">Phone Number</label>
-              <input id="regphone" type="tel" placeholder="Enter a valid phone number" name="phoneNumber" required>
+              <input id="regphone" class="form-control" type="tel" placeholder="Enter a valid phone number" name="phoneNumber" required>
           </div>
 
           <div class="input-box">
               <label for="password">Password</label>
-              <input id="txtregpass" type="password" placeholder="Enter your password" name="password" required>
+              <input id="txtregpass" class="form-control" type="password" placeholder="Enter your password" name="password" required>
           </div>
 
           <div class="input-box">
               <label for="confPassword">Confirm Password</label>
-              <input id="txtregconfpass" type="password" placeholder="Confirm your password" name="confirmPassword" required>
+              <input id="txtregconfpass" class="form-control" type="password" placeholder="Confirm your password" name="confirmPassword" required>
           </div>
 
 
           <span class="user-title">User</span>
-          <div class="user-category">
+          <div class="user-category form-control">
               <input type="radio" name="user" value="student" id="r">
               <label for="user">Student</label>
               <input type="radio" name="user" value="parent">
@@ -403,7 +406,7 @@
       </div>
 
       <div class="button-container">
-          <button type="submit">Register</button>
+          <button class="form-control" type="submit">Register</button>
       </div>
     </form>
 

@@ -13,12 +13,7 @@ rendercatalogAlumni(Testimony.getTestimonials())
 
 
 function rendercatalogAlumni(testimonials=[]){
-    let result=`<div class="testimonial">
-    <h1 class="testimonal-title">TSIW Alumni Testimonials</h1>
-    <h3 class="testimonial-text">Inspiring stories of TSIW alumni who have achieved high success.
-      Read their testimonials and see how the TSIW degree can help you achieve your dreams.</h3>
-    <br>
-  </div>`
+    let result=""
   
     for (const testimonial of testimonials){
 
@@ -47,4 +42,17 @@ function generateCardAlumni(testimonial) {
 
 
 catalogAlumni()
+
+let ativity= document.querySelector("#memory")
+ativity.addEventListener("click", () => {
+
+  
+    window.open(
+      '/Memory Game/memory.html',
+      '_blank') 
+      
+
+  }
+  
+)
 

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESMAD Campus Virtual Tour</title>
+
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!--animation component script-->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent('infoicon', {
+            schema: {
+                linkto: {
+                    type: "string",
+                    default: ""
+                },
+                infogroup: {
+                    type: "string",
+                    default: ""
+                }
+            },
+
+            init: function () {
+
+                // add image source of hotspot icon
+                this.el.setAttribute("src", "#info-icon");
+                // rezise
+                this.el.setAttribute("scale", "0.5 0.5 0.5");
+                // make the icon look at the camera all the time
+                this.el.setAttribute("look-at", "#cam");
+
+                var data = this.data;
+
+                this.el.addEventListener('click', function () {
+                    this.setAttribute("scale", "2.5 1.25 1");
+                    this.setAttribute("src", data.infolink);
+                });
+            }
+        });
+
+        // This is added to make the cursor listener click ******************** 
+
+        // This is the end of the cursor listener  *****************************
+
+        AFRAME.registerComponent('hotspots', {
+            init: function() {
+                this.el.addEventListener('reloadspots', function(evt) {
+
+                    // get the entire current spot group and scale it to 0
+                    var currspotgroup = document.getElementById(evt.detail.currspots);
+                    currspotgroup.setAttribute("scale","0 0 0");
+
+                    // get the entire new current spot group and scale it to 1
+                    var newspotgroup = document.getElementById(evt.detail.newspots);
+                    newspotgroup.setAttribute("scale", "1 1 1");
+                });
+            }
+        });
+
+
+        function loadNewSpotDetails() {
+
+            // set the sky box source to th new image as per the spot
+            var sky = document.getElementById("skybox");
+            sky.setAttribute("src", ndata.linkto);
+
+            var spotcomp = document.getElementById("spots");
+            var currspots = nthis.parentElement.getAttribute("id");
+
+            // create event for spots component to change the spots data
+            spotcomp.emit('reloadspots', {
+                newspots: ndata.spotgroup,
+                currspots: currspots
+            });
+
+            cam.emit("zoomout");
+
+            // var fp = document.getElementById("camfadeplane");
+            // fp.emit("camFadeOut");
+        }
+        var ndata;
+        var nthis;
+
+
+        AFRAME.registerComponent('spot', {
+            schema: {
+                linkto: {
+                    type: "string",
+                    default: ""
+                },
+                spotgroup: {
+                    type: "string",
+                    default: ""
+                },
+            },
+            init: function () {
+
+                // add image source of hotspot icon
+                this.el.setAttribute("src", "#hotspot");
+
+                // make the icon look at the camera all the time  ********************* //
+                this.el.setAttribute("look-at", "#mycam");
+                
+                document.getElementById("cam").setAttribute("camera", 'active', true); //este não está no código do gerson
+
+                var data = this.data;
+
+                this.el.addEventListener('click', function(evt) {
+                    
+                
+                    ndata = data;
+                    nthis = this;
+
+                    var cam = document.getElementById("cam");
+                    document.getElementById("cam").setAttribute("camera", 'active', true);
+                    cam.emit("zoomin");
+
+                    loadNewSpotDetails();
+                });
+            }
+        });
+
+
+        // code for Zoom In and Zoom Out ********************************** //
+
+        window.addEventListener("wheel", (event) => {
+
+            //small increments for smoother zooming
+            const delta = event.wheelDelta / 120 / 10;
+            var mycam = document.getElementById("cam").getAttribute("camera");
+            var finalZoom = document.getElementById("cam").getAttribute("camera", 'active', true).zoom + delta;
+
+            // limiting the zoom
+            if (finalZoom < 0.5) finalZoom = 0.5;
+            if (finalZoom > 2) finalZoom = 2;
+            mycam.zoom = finalZoom;
+
+            document.getElementById("cam").setAttribute("camera", 'active', true, mycam);
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--Mouse cursor controler-->
+    <a-scene background="color: #FAFAFA"
+        inspector="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
+        cursor="rayOrigin: mouse">
+
+        <a-assets>
+
+            <a-mixin id="hotspot-text" text="font:roboto; width: 3; align: center; color: blue;"
+                geometry="primitive: plane; width: 1.5; height: 0.11;" material=""></a-mixin>
+
+            <!--This is the First floor-->
+            <img id="room1" src="/Tour Virtual/images/Entrada_Principal.jpg" alt="Entrada_Principal">
+            <img id="room2" src="/Tour Virtual/images/Servicos_Academicos.jpg" alt="Servicos_Academicos">
+            <img id="room3" src="/Tour Virtual/images/Internacionais.jpg" alt="Internacionais">
+            <img id="room4" src="/Tour Virtual/images/Relogio.jpg" alt="Praca_Relogio">
+            <img id="room5" src="/Tour Virtual/images/Biblioteca_Entrada.jpg" alt="Biblioteca_Entrada">
+            <img id="room6" src="/Tour Virtual/images/Biblioteca_Interior.jpg" alt="Biblioteca_Interior">
+            <img id="room7" src="/Tour Virtual/images/Biblioteca_Interior2.jpg" alt="Biblioteca_Interior2">
+            <img id="room8" src="/Tour Virtual/images/Cantina.jpg" alt="Cantina">
+            <img id="room9" src="/Tour Virtual/images/Bar.jpg" alt="Bar">
+            <img id="room10" src="/Tour Virtual/images/Corredor_Bar.jpg" alt="Corredor Bar">
+            <img id="room11" src="/Tour Virtual/images/Corredor_Presidencia.jpg" alt="Corredor Corredor_Presidencia">
+            <img id="room12" src="/Tour Virtual/images/Passadico.jpg" alt="Passadiço">
+            <img id="room13" src="/Tour Virtual/images/Salas_Aula.jpg" alt="Salas_Aula">
+            <img id="room14" src="/Tour Virtual/images/Anfiteatro.jpg" alt="Anfiteatro">
+            <img id="room15" src="/Tour Virtual/images/Corredor_SIAI.jpg" alt="Corredor SIAI">
+            <img id="room16" src="/Tour Virtual/images/SIAI.jpg" alt="Serviços Informatica">
+
+            
+
+
+            <!--This is for the icon-->
+            <img id="hotspot" src="/Tour Virtual/images/meeting_point.png" alt="Hotspot">
+
+        </a-assets>
+
+
+        <!--Room navigation as per hotspots-->
+        <a-entity id="spots" hotspots>
+
+            
+            <a-entity id="group-room1"> <!-- Espaço Entrada Principal -->
+
+                <!--This wilt take you to Servicos Academicos-->
+                <a-text position="-7 0.7 -1" geometry="primitive: plane; width: 2, height: 0.6;" value="Servicos_Academicos - Floor 0"
+                    mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room2; spotgroup:group-room2;" position="-7 0.20 -1" rotation="0 90 0"></a-image>
+
+                <!--This wilt take you to Corredor Bar-->
+                <a-text position="-7 1.7 -1" geometry="primitive: plane; width: 2, height: 0.6;" value="Corredor_Bar - Floor 1"
+                    mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room10; spotgroup:group-room10;" position="-7 1.2 -1" rotation="0 90 0"></a-image>
+
+                <!--This wilt take you to Biblioteca Entrada-->
+                <a-text position="-7 2.7 -1" geometry="primitive: plane; width: 2, height: 0.6;" value="Biblioteca - Floor 2"
+                    mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room5; spotgroup:group-room5;" position="-7 2.2 -1" rotation="0 90 0"></a-image>
+
+                <!--This wilt take you to Bar-->
+                <a-text position="-2 2.6 8" geometry="primitive: plane; width: 2, height: 0.6;" value="Bar - Floor 1"
+                    mixin="hotspot-text" rotation="0 180 0"></a-text>
+                <a-image spot="linkto:#room9; spotgroup:group-room9;" position="-2 2 8" rotation="0 0 0"></a-image>
+
+                <!--This wilt take you to Cantina-->
+                <a-text position="-2 1.5 8" geometry="primitive: plane; width: 2, height: 0.6;" value="Cantina - Floor 0"
+                    mixin="hotspot-text" rotation="0 180 0"></a-text>
+                <a-image spot="linkto:#room8; spotgroup:group-room8;" position="-2 0.90 8" rotation="0 0 0"></a-image>
+
+                <!--This wilt take you to Praca Relogio-->
+                <a-text position="-5 1.5 3" geometry="primitive: plane; width: 2, height: 0.6;" value="Praca Relogio"
+                    mixin="hotspot-text" rotation="0 120 0"></a-text>
+                <a-image spot="linkto:#room4; spotgroup:group-room4;" position="-8 0.90 5" rotation="0 -30 0"></a-image>
+
+
+            </a-entity>
+
+            <a-entity id="group-room2" scale="0 0 0"> <!-- Espaço SAC -->
+
+                <!--This will take you to Exterior from Servicos Academicos-->
+                <a-text position="9 1.5 -1" geometry="primitive: plane; width: 2, height: 0.5;" value="Entrada Principal"
+                    mixin="hotspot-text" rotation="0 -90 0"></a-text>
+                <a-image spot="linkto:#room1; spotgroup:group-room1;" position="9 0.90 -1" rotation="0 -90 0"></a-image>
+
+                <!--This will take you to GRI Relacoes Internacionais-->
+                <a-text position="-10 2.7 4" geometry="primitive: plane; widht: 2; height: 0.5;" value="Relacoes Internacionais"
+                    mixin="hotspot-text" rotation="0 100 0"></a-text>
+                <a-image spot="linkto:#room3; spotgroup:group-room3;" position="-10 2 4" rotation="0 100 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room3" scale="0 0 0"> <!-- Espaço GRI -->
+
+                <!--This will take you to Praca Relogio from GRI-->
+                <a-text position="1.5 2 -4" geometry="primitive: plane; width: 2, height: 0.5" value="Praca_Relogio"
+                    mixin="hotspot-text" rotation="0 0 0"></a-text>
+                <a-image spot="linkto:#room4; spotgroup:group-room4;" position="2.2 1.6 -6" rotation="0 0 0"></a-image>
+                
+            </a-entity>
+
+
+            <a-entity id="group-room4" scale="0 0 0"> <!-- Espaço Praca Relogio -->
+
+                <!--This will take you to Entrada Principal from Praca Relogio -->
+                <a-text position="9 2.1 -1" geometry="primitive: plane; width: 2, height: 0.5;" value="Entrada Principal"
+                    mixin="hotspot-text" rotation="0 -90 0"></a-text>
+                <a-image spot="linkto:#room1; spotgroup:group-room1;" position="10 1.6 -1" rotation="0 90 0"></a-image>
+
+                <!--This will take you to Corredor SIAI -->
+                <a-text position="-3.5 2.1 -10" geometry="primitive: plane; width: 2, height: 0.5;" value="Servicos Informática - Floor 0"
+                    mixin="hotspot-text" rotation="0 30 0"></a-text>
+                <a-image spot="linkto:#room15; spotgroup:group-room15;" position="-3.5 1.6 -10" rotation="0 30 0"></a-image>
+
+                <!--This will take you to Corredor Presidencia -->
+                <a-text position="-3.5 3 -10" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor_Presidencia - Floor 1"
+                    mixin="hotspot-text" rotation="0 30 0"></a-text>
+                <a-image spot="linkto:#room11; spotgroup:group-room11;" position="-3.5 2.6 -10" rotation="0 30 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room5" scale="0 0 0">  <!-- Espaço Bibliteca Entrada -->
+
+                <!--This will take you to to Exterior from Biblioteca Entrada-->
+                <a-text position="-5 2.1 4" geometry="primitive: plane; width: 2, height: 0.5" value="Entrada_Principal"
+                    mixin="hotspot-text" rotation="0 120 0"></a-text>
+                <a-image spot="linkto:#room1; spotgroup: group-room1;" position="-5 1.6 4" rotation="0 120 0"></a-image>
+
+                <!--This will take you to Biblioteca Interior-->
+                <a-text position="8 2.1 -4" geometry="primitive: plane; width: 2, height: 0.5" value="Biblioteca_Interior"
+                    mixin="hotspot-text" rotation="0 -45 0"></a-text>
+                <a-image spot="linkto:#room6; spotgroup: group-room6;" position="8 1.60 -4" rotation="0 -45 0"></a-image>
+                
+            </a-entity>
+
+
+            <a-entity id="group-room6" scale="0 0 0"> <!-- Espaço Biblioteca Interior 1 -->
+
+                <!--This will take you back to Biblioteca Entrada-->
+                <a-text position="-10 2.1 2" geometry="primitive: plane; width: 2, height: 0.5;" value="Biblioteca_Entrada"
+                    mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room5; spotgroup:group-room5;" position="-10 1.6 2" rotation="0 90 0"></a-image>
+
+                <!--This will take you to Biblioteca Interior 2 -->
+                <a-text position="5.5 1.6 -3" geometry="primitive: plane; width: 2, height: 0.5;" value="Biblioteca_Interior2"
+                    mixin="hotspot-text" rotation="0 -80 0"></a-text>
+                <a-image spot="linkto:#room7; spotgroup:group-room7;" position="5.5 1 -3" rotation="0 -80 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room7" scale="0 0 0"> <!-- Espaço Bibliteca Interior 2 -->
+
+                <!--This will take you back to Biblioteca Interior 1 -->   <!-- VER TEXTO NAO APARECE -->
+                <a-text position="-4 1.6 0" geometry="primitive: plane; width: 2, height: 5" value="Biblioteca_Interior1"
+                    mixin="hotspot-text" rotation="0 -45 0"></a-text>
+                <a-image spot="linkto:#room6; spotgroup: group-room6;" position="-4 1.60 10" rotation="0 -10 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room8" scale="0 0 0"> <!-- CAntina -->
+
+                <!--This will take you back to Exterior from Cantina -->
+                <a-text position="-5 2.1 -10" geometry="primitive: plane; width: 2, height: 0.5;" value="Entrada_Principal"
+                mixin="hotspot-text" rotation="0 0 0"></a-text>
+                <a-image spot="linkto:#room1; spotgroup: group-room1;" position="-5 1.6 -10"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room9" scale="0 0 0"> <!-- Bar -->
+
+                <!--This will take you back to Corredor Bar from BAr -->
+                <a-text position="-3 2.1 -10" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor Bar"
+                mixin="hotspot-text" rotation="0 0 0"></a-text>
+                <a-image spot="linkto:#room10; spotgroup: group-room10;" position="-3 1.6 -10"></a-image>
+
+            </a-entity>
+
+
+            
+            <a-entity id="group-room10" scale="0 0 0"> <!-- Corredor Bar -->
+
+                <!--This will take you to to Exterior from Bar Corredor -->
+                <a-text position="2 2.1 2" geometry="primitive: plane; width: 2, height: 0.5" value="Entrada_Principal"
+                    mixin="hotspot-text" rotation="0 210 0"></a-text>
+                <a-image spot="linkto:#room1; spotgroup: group-room1;" position="2 1.6 2" rotation="0 45 0"></a-image>
+
+                <!--This wilt take you back to Bar-->
+                <a-text position="5.5 2.1 -4" geometry="primitive: plane; width: 2, height: 0.5;" value="Bar - Floor 1"
+                    mixin="hotspot-text" rotation="0 -20 0"></a-text>
+                <a-image spot="linkto:#room9; spotgroup:group-room9;" position="8 1.6 -6" rotation="0 -45 0"></a-image>
+
+                <!--This will take you to Corredor Presidencia from BAr Corredor -->
+                <a-text position="-10 2.1 6" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor_Presidencia"
+                mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room11; spotgroup: group-room11;" position="-10 1.6 6" rotation="0 90 0"></a-image>                
+
+            </a-entity>
+
+
+            <a-entity id="group-room11" scale="0 0 0"> <!-- Corredor Presidencia -->
+
+                <!--This will take you to Passadiço -->
+                <a-text position="9 2.3 -8" geometry="primitive: plane; width: 2, height: 0.5;" value="Passadico e Salas_Aula"
+                mixin="hotspot-text" rotation="0 -60 0"></a-text>
+                <a-image spot="linkto:#room12; spotgroup: group-room12;" position="9 1.8 -8" rotation="0 -60 0"></a-image>
+
+                <!--This will take you back to Corredor Bar from Corredor Presidencia -->
+                <a-text position="-12 1.4 6" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor Bar"
+                mixin="hotspot-text" rotation="0 120 0"></a-text>
+                <a-image spot="linkto:#room10; spotgroup: group-room10;" position="-12 0.8 6" rotation="0 120 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room12" scale="0 0 0"> <!-- Passadiço -->
+
+                <!--This will take you to Classrooms -->
+                <a-text position="11 2.1 -6" geometry="primitive: plane; width: 2, height: 0.6;" value="Salas_Aula"
+                mixin="hotspot-text" rotation="0 -30 0"></a-text>
+                <a-image spot="linkto:#room13; spotgroup: group-room13;" position="11 1.6 -6" rotation="0 90 0"></a-image>
+
+                <!--This will take you back to Corredor Presidencia -->
+                <a-text position="-12 1.4 7" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor_Presidencia"
+                mixin="hotspot-text" rotation="0 120 0"></a-text>
+                <a-image spot="linkto:#room11; spotgroup: group-room11;" position="-12 0.8 7" rotation="0 120 0"></a-image>
+
+                <!--This will take you to Anfiteatro -->
+                <a-text position="11 2.1 -4" geometry="primitive: plane; width: 2, height: 0.6;" value="Anfiteatro"
+                mixin="hotspot-text" rotation="0 -30 0"></a-text>
+                <a-image spot="linkto:#room14; spotgroup: group-room14;" position="11 1.6 -4" rotation="0 90 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room13" scale="0 0 0"> <!-- Salas Aula -->
+
+                <!--This will take you back to Passadiço -->
+                <a-text position="11 2.1 2.5" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor e Passadico"
+                mixin="hotspot-text" rotation="0 -90 0"></a-text>
+                <a-image spot="linkto:#room12; spotgroup: group-room12;" position="11 1.6 2.5" rotation="0 -90 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room14" scale="0 0 0"> <!-- Anfiteatro -->
+
+                <!--This will take you back to Passadiço -->
+                <a-text position="4 1.4 -13" geometry="primitive: plane; width: 2, height: 0.5;" value="Passadico"
+                mixin="hotspot-text" rotation="0 -30 0"></a-text>
+                <a-image spot="linkto:#room12; spotgroup: group-room12;" position="4 0.8 -13" rotation="0 -30 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room15" scale="0 0 0"> <!-- Corredor SIAI -->
+
+                <!--This will take you to SIAI -->
+                <a-text position="-7 1.6 5" geometry="primitive: plane; width: 2, height: 0.5;" value="Servicos Informatica"
+                mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room16; spotgroup: group-room16;" position="-10 0.8 7" rotation="0 -30 0"></a-image>
+
+                <!--This will take you back to Praça do Relogio -->
+                <a-text position="7 2.1 -4" geometry="primitive: plane; width: 2, height: 0.5;" value="Praca Relogioo"
+                mixin="hotspot-text" rotation="0 -30 0"></a-text>
+                <a-image spot="linkto:#room4; spotgroup: group-room4;" position="9 1.6 -5" rotation="0 -30 0"></a-image>
+
+            </a-entity>
+
+
+            <a-entity id="group-room16" scale="0 0 0"> <!-- SIAI -->
+
+                <!--This will take you to Corredor SIAI -->
+                <a-text position="-7 1.6 5" geometry="primitive: plane; width: 2, height: 0.5;" value="Corredor_SIAI"
+                mixin="hotspot-text" rotation="0 90 0"></a-text>
+                <a-image spot="linkto:#room15; spotgroup: group-room15;" position="-10 0.8 7" rotation="0 -30 0"></a-image>
+
+                <a-text position="-2 2.5 -4" geometry="primitive: plane; width: 3, height: 1" value="No Servico Informatica - SIAI podes:"
+                mixin="hotspot-text" rotation="0 30 0"></a-text>
+                <a-text position="-2 2.3 -4" geometry="primitive: plane; width: 3, height: 1" value="Obter credenciais de acesso ao mail e moodle."
+                mixin="hotspot-text" rotation="0 30 0"></a-text>
+                <a-text position="-2 2.1 -4" geometry="primitive: plane; width: 3, height: 1" value="Resolver questoes informaticas ou de rede."
+                mixin="hotspot-text" rotation="0 30 0"></a-text>
+
+            </a-entity>
+
+
+
+
+
+
+        </a-entity>
+
+        <a-entity id="cam" camera="zoom:1" position="0 1.6 0" look-controls="reverseMouseDrag:false" wasd-controls
+            animation_zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+            animation_zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;">
+
+            <!-- code for mouse cursor-->
+            <a-entity cursor="fuse:true;fuseTimeout:2000"
+                  geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                  position="0 0 -1.8"
+                  material="shader:flat;color:#ff0000"
+                  animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:1000;loop:1">
+            </a-entity>
+
+        </a-entity>
+
+        <a-sky id="skybox" src="#room1"></a-sky>
+
+    </a-scene>
+
+    <script>
+        var ccam = document.getElementById("cam");
+        ccam.addEventListener("animationcomplete", loadNewSpotDetails());
+    </script>
+
+
+
+</body>
+
+</html>

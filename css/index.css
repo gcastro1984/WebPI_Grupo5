@@ -72,6 +72,12 @@ li.active .nav-link:before,
   transform: scaleX(1);
 }
 
+.btn {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+
 /* estilização da caixa search */
 .form-control {
     height: 41px;
@@ -104,3 +110,15 @@ li.active .nav-link:before,
     border-radius: 50%;
  }
 
+#btnLogout {
+    margin-top: 5px;
+    height: 40px;
+    font-family: sora_bold;
+    font-weight:300;
+    font-size: 15px;
+    background-color: #d9b967;
+    color: #0e21a0;
+    border-radius: 5px;
+    border: none;
+
+ }
