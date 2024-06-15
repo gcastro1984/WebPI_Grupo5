@@ -1,4 +1,5 @@
 import * as Testimony from "../models/AlumniModel.js";
+import { isLogged} from "../models/UserModel.js";
 
 
 
@@ -45,14 +46,21 @@ catalogAlumni()
 
 let ativity= document.querySelector("#memory")
 ativity.addEventListener("click", () => {
+  if(isLogged()){
 
-  
     window.open(
       '/Memory Game/memory.html',
       '_blank') 
       
 
-  }
+  }else{
+    alert("Login first!")}
   
-)
+})
+
+
+
+  
+
+  
 

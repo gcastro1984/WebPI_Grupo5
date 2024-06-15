@@ -122,3 +122,14 @@ li.active .nav-link:before,
     border: none;
 
  }
+#authButtons{
+    font-family:sora_bold;
+    color: white;
+    font-size: large;
+}
+
+#authButtons a{
+    font-family: sora_bold;
+    color: white;
+    text-decoration:none
+}

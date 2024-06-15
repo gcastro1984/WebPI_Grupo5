@@ -1,5 +1,5 @@
 import * as CurricularUnit from "../models/DegreeModel.js";
-import { getUserLogged } from "../models/UserModel.js";
+import { isLogged} from "../models/UserModel.js";
 
 
 
@@ -33,12 +33,18 @@ renderDegree()
 let ativity= document.querySelector("#quizz")
 ativity.addEventListener("click", () => {
 
+  if(isLogged()){
+
+  
+
   
     window.open(
       '/Quizz/quizz.html',
       '_blank') 
       
 
+  }else{
+    alert("Login first!")
   }
-  
+}
 )

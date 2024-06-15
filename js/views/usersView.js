@@ -197,3 +197,38 @@ btnNew.addEventListener('click',(e)=> {
     }
 
 })
+
+function eventsLength(){
+
+    let events= JSON.parse(localStorage.events)
+    return events.length
+
+}
+
+document.querySelector("#eventsLength").innerHTML=eventsLength()
+
+function projectsLength(){
+
+    let projects= JSON.parse(localStorage.projects)
+    return projects.length
+
+}
+
+document.querySelector("#projectsLength").innerHTML=projectsLength()
+
+function usersLength(){
+
+    let users= JSON.parse(localStorage.users)
+    return users.length
+
+}
+
+document.querySelector("#usersLength").innerHTML=usersLength()
+function testimonialsLength(){
+
+    let testimonials= JSON.parse(localStorage.testimonials)
+    return testimonials.length
+
+}
+
+document.querySelector("#testimonialsLength").innerHTML=testimonialsLength()
