@@ -242,6 +242,7 @@ if (!localStorage.users) {
             name:"Joana Crasto",
             job:"Social Media | KuantoKusta",
             text:"I went ahead with the application in Technologies and Information Systems for the Web, without knowing exactly what I was going to learn. When I realized it was programming, I was in shock. Still I didn't give up! While I was still in my second year, I had the opportunity to apply my learning to a startup, IOTECH, where I discovered another passion: creating content for social media.",
+            imgsrc:"/images/testimonials/Joana Crasto.jpg",
             active: true,
     
             },
