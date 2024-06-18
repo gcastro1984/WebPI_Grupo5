@@ -37,7 +37,8 @@ export function add(name,studentName,partner,text,year,imgsrc,url,active=true) {
 
 //Alterar Projecto
 
-export function change(name,studentName, partner,text,year,imgsrc,url,active,posicao) {
+export function change(name,studentName,partner,text,year,imgsrc,url,active,posicao) {
+    
     //posicao do array
 
     projects[posicao].name = name

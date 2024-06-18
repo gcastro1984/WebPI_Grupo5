@@ -106,7 +106,11 @@ body {
     color:#0e21a0;
 }
 
-#quizz {
+.bntativity{
+    background-color: #9d44c0;
+}
+
+.bntativity button {
     margin-bottom: 10px;
     border: none;
     outline: 0;

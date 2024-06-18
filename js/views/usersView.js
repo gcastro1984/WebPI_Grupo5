@@ -187,7 +187,7 @@ btnNew.addEventListener('click',(e)=> {
         
 
         User.addAdmin(username, password, name, email,phone,type,score)
-        alert("Utilizador adicionado com sucesso!")
+        alert(`${username} add with success!` )
         //carrega novamente a tabela
         tableUsers()
         //refresh à pagina 

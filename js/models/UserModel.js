@@ -22,6 +22,7 @@ export function init(){
 export function add(username, password, name, email,phone,type,score,active,avatar){
     if(users.some((user) => user.username===username)){
         alert(`User ${username} already exists`)
+        
     } else {
         
         users.push(new User(username, password, name, email,phone,type,score,active,avatar))

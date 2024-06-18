@@ -66,7 +66,7 @@ function tableProjects(){
         btn.addEventListener('click',(e)=> {
             e.preventDefault();
 
-            //guarda a linha onde o evento edit foi ativado
+            //guarda a linha onde o projecto  foi ativado
             const row = e.target.parentElement.parentElement;
            
             
@@ -117,10 +117,12 @@ function tableProjects(){
                       
                 // convert o valor para um inteiro e ajusta à correta posição no array
                 let posicao =parseInt(row.rowIndex)-2
+                
+                imgsrc = imgsrc.replace("C:\\fakepath\\","/images/projectos/")
 
                 // chama a funçao edit
 
-                Project.change(name,studentName,partner,text,year,name,imgsrc,url,status,posicao)
+                Project.change(name,studentName,partner,text,year,imgsrc,url,status,posicao)
 
   
                 

@@ -156,11 +156,13 @@ const matrixGenerator = (cardValues, size = 4) => {
 
                         // verificar se o contador de vitorias é metade do cardValues
                         if (winCount === Math.floor(cardValues.length / 2)) {
-                            result.innerHTML = `<h2>Congrats! You Won!</h2>in<h4>Moves: ${movesCount}</h4>`;
+                            
                             let userScore=0
                             if(movesCount<=20){
                                 userScore=250
                             }else{userScore=100}
+
+                            result.innerHTML = `<h2>Congrats! You Won!</h2>in<h4>Moves: ${movesCount} Points: ${userScore}</h4>`;
 
                             User.updateScore(userScore)
 
