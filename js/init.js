@@ -215,7 +215,7 @@ if (!localStorage.users) {
         {
             name:"Raquel Silva",
             job: "Kendir Studios",
-            text:"A passagem pela ESMAD e pela Licenciatura em Tecnologias e Sistemas de Informação para a Web proporcionou-me o ingresso no mercado de trabalho e neste mundo do desenvolvimento dos jogos educativos, na qual realizo atualmente a minha vida profissional",
+            text:"My time at ESMAD and the Degree in Information Technologies and Systems for the Web gave me entry into the job market and into the world of developing educational games, in which I currently spend my professional life.",
             imgsrc:"/images/testimonials/Raquel Silva.jpg",
             active: true,
 
@@ -224,7 +224,7 @@ if (!localStorage.users) {
         {
         name:"Nuno Sousa",
         job:"Carbmee Governo Britânico ESMAD",
-        text:"Não posso deixar de referir que até ao entrar na ESMAD não sabia nada de programação e design, pelo que, além do meu esforço, o excelente acompanhamento dos professores e a sua experiência tanto a nível do ensino como também profissional foi sem dúvida o impulsionador disto tudo. Não poderia estar mais grato a todos os professores, colegas, e à ESMAD.",
+        text:"I can't help but mention that until I started at ESMAD I didn't know anything about programming and design, so, in addition to my effort, the excellent support from the teachers and their experience both at a teaching and professional level was undoubtedly the driving force behind this. all. I couldn't be more grateful to all my teachers, colleagues, and ESMAD.",
         imgsrc:"/images/testimonials/Nuno Sousa.jpg",
         active: true,
 
@@ -233,7 +233,7 @@ if (!localStorage.users) {
         {
           name:"Diogo Fernandes",
           job:"Product Designer | Blip | Betfair | Paddy Power | Pokerstars | Fanduel | Sky Bet",
-          text:"TSIW deu-me todos os recursos necessários para conhecer a área por completo. Comecei inicialmente com o objetivo de seguir uma carreira em programação front-end, mas graças à vasta oferta que o curso nos dá, descobri tudo o que se passava para além do código. Com isto, descobri então o mundo de User Experience e nunca mais olhei para trás. Até ao momento, continuo na Blip, como Product Designer, e extremamente feliz com a minha posição atual. Nunca me esqueço do que aprendi com TSIW, os meus colegas, professores e a ESMAD!",
+          text:"TTSIW gave me all the resources I needed to get to know the area completely. I initially started with the aim of pursuing a career in front-end programming, but thanks to the wide range of options that the course offers, I discovered everything that went on beyond the code. With this, I discovered the world of User Experience and never looked back. To date, I am still at Blip, as a Product Designer, and extremely happy with my current position. I will never forget what I learned from TSIW, my colleagues, teachers and ESMAD.",
           imgsrc:"/images/testimonials/Diogo Fernandes.jpg",
           active: true,
   
@@ -241,8 +241,7 @@ if (!localStorage.users) {
           {
             name:"Joana Crasto",
             job:"Social Media | KuantoKusta",
-            text:"Avancei com a candidatura em Tecnologias e Sistemas de Informação para a Web, sem saber ao certo o que ia aprender. Quando percebi que era programação, fiquei em estado de choque. Ainda assim nãodesisti! Enquanto ainda estava no segundo ano, tive a oportunidade de aplicara minha aprendizagem numa startup, a IOTECH, onde descobri outra paixão: a criação de conteúdos para redes sociais.",
-            imgsrc:"/images/testimonials/Joana Crasto.jpg",
+            text:"I went ahead with the application in Technologies and Information Systems for the Web, without knowing exactly what I was going to learn. When I realized it was programming, I was in shock. Still I didn't give up! While I was still in my second year, I had the opportunity to apply my learning to a startup, IOTECH, where I discovered another passion: creating content for social media.",
             active: true,
     
             },
