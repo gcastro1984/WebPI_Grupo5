@@ -5,7 +5,7 @@ import * as Event from "./models/EventsModel.js"
 import * as Project from "./models/ProjectsModel.js"
 
 
-initdata();
+
 
 function initdata() {
     //UCs
@@ -276,21 +276,21 @@ if(!localStorage.events){
 
             
       {
-        name:"Drive",
-        date:"07-12-2018",
+        name:"CSII - Sistemas Interativos e Intel",
+        date:"18-05-2018",
         edition:"2ªEdiçao",
-        text:"Evento que visa potenciar parcerias de estágios curriculares e desenvolvimento de projetos, integrar os finalistas no mercado de trabalho e apoiar as empresas no processo de seleção de perfis.",
-        imgsrc:"/images/eventos/drive2th.jpg",
+        text:"The 2nd edition covered topics such as Digital Media, Artificial Intelligence and New Web Trends. CSII is jointly organized by the Degrees in TSIW and Multimedia.",
+        imgsrc:"/images/eventos/csii.2th.jpg",
         active:true,
     
 
       },
       {
-        name : "Mad Game Jam",
-        date:"07-12-2018",
+        name : "TSIW endpoints",
+        date:"26-10-2022",
         edition:"7ªEdiçao",
-        text:"The MAD Game Jam competition challenges teams to create, in 48 non-stop hours, video games whose theme they will only learn about on the same day. Fantastic atmosphere and great prizes are some reasons for the gaming community not to miss this event!",
-        imgsrc:"/images/eventos/madgamejam.5th.jpg",
+        text:"TSIW Endpoints is an initiative that aims to bring graduates from the Degree in Information Technologies and Systems for the Web back to ESMAD, providing a space for sharing their experiences and their professional path.",
+        imgsrc:"/images/eventos/eventos5.jpg",
         active:true,
     
 
@@ -383,3 +383,5 @@ if(!localStorage.projects){
       });
     }
 }
+
+initdata();
