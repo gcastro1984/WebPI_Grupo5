@@ -56,13 +56,13 @@ export function change(password, name, email, phone,userIndex,srcAvatar) {
 //Login user
 
 export function login(username,password){
-    const user = users.find((user) => user.username===username && user.password===password);
+    const user = users.find((user) => user.username===username && user.password===password && user.active==true);
    
     if(user){
     sessionStorage.setItem("loggedUser", JSON.stringify(user))
     return true
     }else{
-        throw Error("Invalid login!")
+        alert("Invalid login!")
     }
 
 }
@@ -92,6 +92,8 @@ export function findIndexUser(username){
   
         }
     
+
+//Atualiza pontuaçao depois de cada atividade        
 export function updateScore(score){
     let UserLogged=getUserLogged()
     const tempUsers = JSON.parse(localStorage.users)
@@ -174,7 +176,6 @@ export function addAdmin(username, password, name, email,phone,type,score){
 
 export function userClassification(){
     users.sort((a,b)=>(a.score<b.score) ? 1:-1)
-    console.log(users)
     return users
 }
 

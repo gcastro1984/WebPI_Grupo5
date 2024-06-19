@@ -143,17 +143,30 @@ body {
     }
   }
 
-  #memory {
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bntativity button {
     margin-bottom: 10px;
+    width: 150%;
     border: none;
     outline: 0;
-    padding: 10px;
-    color: #d9b967;
-    background-color: #0e21a0;
+    color: #0e21a0;
     text-align: center;
     cursor: pointer;
-    width: 100%;
     font-family: sora_bold;
     font-size: 15px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border: solid 1px #0e21a0;
+    border-radius: 15px;
+    background-color: #d9b967;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.bntativity button:hover {
+    background-color: #0e21a0;
+    border: solid 1px #9d44c0;
+    color: #d9b967;
+    transform: scale(1.1);
 }

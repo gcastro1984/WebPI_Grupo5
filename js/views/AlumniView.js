@@ -22,7 +22,7 @@ function rendercatalogAlumni(testimonials=[]){
         result+=generateCardAlumni(testimonial)
       }
     }
-
+    result+=`</div>`
     //Adicionar cardas na pagina
     document.querySelector("#alumni").innerHTML=result
 }

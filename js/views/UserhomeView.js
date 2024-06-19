@@ -1,7 +1,6 @@
 import * as User from "../models/UserModel.js";
 User.init()
 let user = User.getUserLogged()
-console.log(user)
 let userInfo = document.querySelector("#userinformation")
 let userAvatar = document.querySelector("#avatar")
 let confirmPass= document.querySelector("#confirmpass")
@@ -86,16 +85,20 @@ btnEdit.addEventListener('click',(e)=> {
 
 function renderUserTopScore(){
 let topScore= document.querySelector(".summary-card")
+
+
+// guarda num array os utilizadores ordenados pela pontuaçao
 let users = User.userClassification()
 
 
+//insere cada utilizador do array
 let result=`<h2>User Top Score</h2>
 <br>`
 for (const user of users) {
     result+=`<div class="summary-single">
                             <div ></div>
                             <div>
-                                <h5>${user.name}</h5>
+                                <h5>${user.username}</h5>
                                 <small>${user.score} pts</small>
                             </div>
                         </div>`
