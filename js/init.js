@@ -305,6 +305,24 @@ if(!localStorage.events){
     
 
       },
+      {
+        name : "ICPEC Conference",
+        date:"26-28 -2023",
+        edition:"4ªEdiçao",
+        text:"ICPEC | International Computer Programming Education Conference is an international scientific conference that this year will take place at the Escola Superior de Media Artes e Design of the Polytechnic of Porto.",
+        imgsrc:"/images/eventos/ICPEC.png",
+        active:true,
+      },
+      {
+        name : "Web Dev Talks ",
+        date:"29-10- 2020",
+        edition:"1ªEdiçao",
+        text:"	Web Dev Talks are a biannual event where the aim is to discuss emerging topics in the areas of Web technologies.",
+        imgsrc:"/images/eventos/WebDevTalks.jpg",
+        active:true,
+      }
+    
+
       
     
     
