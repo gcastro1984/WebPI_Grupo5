@@ -325,7 +325,7 @@ if(!localStorage.projects){
         partner:"BindTunning",
         text:"",
         year:"2023",
-        imgsrc:"/images/projectos/Beatriz Lopes.jpg",
+        imgsrc:"/images/projectos/Beatriz_Lopes.jpg",
         url:"https://www.youtube.com/embed/hOpRyUDhx1k?si=wtncz6fv32_CAymV",
         active:true,
     
@@ -340,7 +340,7 @@ if(!localStorage.projects){
         partner:"Riopele",
         text:"",
         year:"2023",
-        imgsrc:"/images/projectos/Gonçalo Gama.jpg",
+        imgsrc:"/images/projectos/Gonçalo_Gama.jpg",
         url:"https://www.youtube.com/embed/Zit1YOjSaok?si=fsMDnYbVNO3qh1yg",
         active:true,
     
@@ -352,7 +352,7 @@ if(!localStorage.projects){
         partner:"MOG",
         text:"",
         year:"2023",
-        imgsrc:"/images/projectos/Luis Gomes.jpg",
+        imgsrc:"/images/projectos/Luis_Gomes.jpg",
         url:"https://www.youtube.com/embed/opE_ThSVI2g?si=JJ-FCHgvQoUEIKIs",
         active:true,
     
@@ -364,7 +364,7 @@ if(!localStorage.projects){
         partner:"NONIUS",
         text:"",
         year:"2023",
-        imgsrc:"/images/projectos/Marco Malta.jpg",
+        imgsrc:"/images/projectos/Marco_Malta.jpg",
         url:"https://www.youtube.com/embed/BC5W3daFLGU?si=ho6dsmOKofym2csp",
         active:true,
     
