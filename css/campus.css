@@ -38,22 +38,30 @@ body {
 
 .container-numbers {
     background-color: #0e21a0;
+    height: 230px;
 }
 .container-numbers p {
     font-family: sora_bold;
     font-weight: bolder;
     font-size:x-large;
     color: #d9b967;
+    padding: 5%;
 }
 
 .display-2 {
+    margin-top: 20px;
     font-family: sora_medium;
     font-weight: bolder;
-    font-size:x-large;
+    font-size: 35px;
     color: white;
     text-shadow: #0e21a0;
 }
 
+.container-numbers img {
+    background-color: #d9b967;
+    border-radius: 50%;
+    width: 12%;
+}
 
 .esmad-tour {
     background-color: #9d44c0; 
@@ -83,6 +91,7 @@ body {
 .map-image {
     margin: 5%;
     width: 80%;
+    border-radius: 5%;
 }
 
 

@@ -119,7 +119,7 @@ document.querySelector("#registerUser").addEventListener("submit",(event) =>{
   if (document.getElementById("txtregpass").value!==document.getElementById("txtregconfpass").value) {
     alert(`Password error`)
     
-  } else { User.add(document.getElementById("txtregeusername").value,document.getElementById("txtregpass").value,document.getElementById("txtregname").value,document.getElementById("txtregemail").value,document.getElementById("regphone").value,document.getElementById("regphone").value)
+  } else { User.add(document.getElementById("txtregeusername").value,document.getElementById("txtregpass").value,document.getElementById("txtregname").value,document.getElementById("txtregemail").value,document.getElementById("regphone").value,"user")
     alert("User registered with success!")
     // Wait 1 second before reloading, so the user can see the login success message
     setTimeout(() => {

@@ -20,9 +20,31 @@ footer {
     
 }
 
+
+.footer .row {
+    margin: 20%;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.col-33 {
+    margin-top: 1%;
+    width: 33.33%;
+}
+
+footer img {
+    width: 70px;
+    margin-left: 15%;
+}
+
+.logo_central {
+    margin-left: 45%;
+}
+
 /* formatar a class contacts */
 .contacts {
-    padding: 10px;
+    margin-top: -20px;
     font-family: sora_bold;
     color: white;
     justify-content: right;
@@ -79,10 +101,10 @@ footer .menu li a:hover{
     font-size: 0.9em;
 } 
 
-/* formatar a faixa fundo que contem copyright do footer */
-.bottom {
-    padding: 1em;
-    background-color: #9d44c0;
+/* para o copyrights */
+.copyrights {
+   height: 30px;
+   background-color: #9d44c0;
 }
 
 /* formatar o paragrafo copyright do footer */
@@ -90,7 +112,7 @@ footer p {
     font-family: sora_bold;
     color: white;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 0.8em;   
 }
 
@@ -117,8 +139,6 @@ footer p {
     text-align: center;
 
 }
-
-
 
 
 

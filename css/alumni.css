@@ -83,8 +83,8 @@ body {
 }
 
 .testimonial-text {
-    margin-top: 5%;
-    font-family: sora;
+    margin-top: 0%;
+    font-family: sora_medium;
     font-size: bold;
     color: #d9b967;
 }
@@ -144,20 +144,23 @@ body {
   }
 
   .btn-container {
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
+
 .bntativity button {
-    margin-bottom: 10px;
-    width: 150%;
+    width: 200%;
+    margin-left: -50%;
     border: none;
     outline: 0;
     color: #0e21a0;
     text-align: center;
     cursor: pointer;
     font-family: sora_bold;
-    font-size: 15px;
+    font-size: 20px;
     padding: 10px 20px;
     border: solid 1px #0e21a0;
     border-radius: 15px;

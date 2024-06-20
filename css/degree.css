@@ -15,42 +15,45 @@ body {
     background-color: #9d44c0;
 }
 
-.teachers-container {
-    margin-top: -10%;
+.container {
+    margin-top: 80px;
+}
+
+.teachers-container .row {
+    margin: 20%;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    flex-flow: row wrap;
+
+}
+
+.col-50 {
+    width: 50%;
 }
 
 .teachers-img {
    border-radius: 5%;
-   margin-top: 0%;
-   width: 60%;
-   margin-left: 20%;
-   margin-bottom: 10px;
+   margin-top: 10%;
+   width: 100%;
+   margin-bottom: 5%;
 }
 
 .teachers-vision {
-    max-width: 70%;
+    max-width: 100%;
     font-family: sora;
-    font-size: 25px;
-    color: white;
+    font-size: 45px;
+    color: #d9b967;
     text-align: center;
-    row-gap: 5%;
     margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 20%;
     margin-left: 15%;
 }
 
 
 .teachers-name {
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-family: sora;
-    font-size: 25px;
+    font-size: 35px;
     font-family: sora;
     color: white;
     text-align: center;
@@ -59,7 +62,7 @@ body {
 .tsiw-name {
     margin-top: 5px;
     font-family: sora;
-    font-size: 25px;
+    font-size: 30px;
     font-family: sora;
     color: white;
     text-align: center;
@@ -67,7 +70,7 @@ body {
 
 .line {
     color: #0e21a0;
-    border-top: 3px solid;
+    border-top: 4px solid;
 }
 
 .sylabus-container {
@@ -76,10 +79,14 @@ body {
 
 .sylabus-container-title {
     font-family: sora;
-    font-size: xx-large;
+    font-size: 40px;
     font-weight: bold;
     color:#d9b967;
     text-align: center;
+}
+
+.card {
+    margin: 1%;
 }
 
 .card-title {
@@ -89,6 +96,7 @@ body {
     color:#0e21a0;
     text-align: center;
     margin-top: 1%;
+    border-radius: 5%;
 }
 
 .card-body span{
@@ -107,20 +115,23 @@ body {
 }
 
 .btn-container {
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
+
 .bntativity button {
-    margin-bottom: 10px;
-    width: 150%;
+    width: 200%;
+    margin-left: -50%;
     border: none;
     outline: 0;
     color: #0e21a0;
     text-align: center;
     cursor: pointer;
     font-family: sora_bold;
-    font-size: 15px;
+    font-size: 20px;
     padding: 10px 20px;
     border: solid 1px #0e21a0;
     border-radius: 15px;

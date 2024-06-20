@@ -33,6 +33,9 @@ body #parallax-tsiw {
 
 .margin-top-10 {
   padding-top: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+
 }
 
 .margin-bot-10 {
@@ -50,7 +53,7 @@ body #parallax-tsiw {
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
-  color: white;
+  color: #0e21a0;
   padding: 0;
   margin: 0;
 }
@@ -73,26 +76,14 @@ body #parallax-tsiw {
   font-weight: 400;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: white;
+  color: #0e21a0;
 }
 
 #parallax-tsiw p {
-  font-family: sora_light;
+  font-family: sora_bold;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 24px;
-}
-
-.first-character {
-  font-family: sora_extra_bold;
-  font-weight: 400;
-  float: left;
-  font-size: 84px;
-  line-height: 64px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -101,7 +92,7 @@ body #parallax-tsiw {
 .web,
 .infra,
 .employee {
-  color: white;
+  color: #0e21a0;
 }
 
 
@@ -133,11 +124,12 @@ body #parallax-tsiw {
 
 #parallax-tsiw .block {
   background: white;
-  padding: 60px;
+  padding: 40px;
   width: 100%;
-  margin-right: 0;
+  margin-right: 10%;
   margin-left: 0;
-  text-align: justify;
+  text-align: center;
+  justify-content: center;
 }
 
 #parallax-tsiw .block-gray {
@@ -156,16 +148,14 @@ body #parallax-tsiw {
 }
 
 #parallax-tsiw .one,
-#parallax-tsiw .three {
-  background-color: #4d2db7;
-  color: white;
-}
-
+#parallax-tsiw .three,
 #parallax-tsiw .two,
 #parallax-tsiw .four {
-  background-color: #9d44c0;
-  color: white;
+  background-color: #d9d9d9;
+  color: #0e21a0;
 }
+
+
 
 
 /* Section - Parallax */
@@ -178,7 +168,7 @@ body #parallax-tsiw {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(/images/campus_images/Esmad_campus_rezise.jpeg);
+  background-image: url(/images/campus_images/Esmad_campus_rezise_blue.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -193,7 +183,7 @@ body #parallax-tsiw {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(/images/web_tecnologies.jpg);
+  background-image: url(/images/web_tecnologies_blue.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -208,7 +198,7 @@ body #parallax-tsiw {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(/images/Esmad\ Labs.png);
+  background-image: url(/images/esmad\ Labs_blue.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -224,7 +214,7 @@ body #parallax-tsiw {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(/images/Web-designer-1.jpg);
+  background-image: url(/images/Web-designer-1_blue.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -270,8 +260,8 @@ body #parallax-tsiw {
 /**************************/
 
 #parallax-tsiw .line-break {
-  border-bottom: 2px solid white;
-  width: 150px;
+  border-bottom: 2px solid #9d44c0;
+  width: 80%;
   margin: 0 auto;
 }
 
